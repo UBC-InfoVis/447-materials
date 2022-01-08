@@ -1,1 +1,0 @@
-# P2: Visualizing Political Leaders
