@@ -10,3 +10,6 @@
 [submodule "case-studies"]
 	path = case-studies
 	url = git@github.com:UBC-InfoVis/2021-436V-case-studies.git
+[submodule "programming-assignments/skeletons"]
+	path = programming-assignments/skeletons
+	url = git@github.com:UBC-InfoVis/436V-assignments.git
