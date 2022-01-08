@@ -1,0 +1,3 @@
+[submodule "programming-assignments/solutions"]
+	path = programming-assignments/solutions
+	url = git@github.com:UBC-InfoVis/436V-assignment-solutions.git
