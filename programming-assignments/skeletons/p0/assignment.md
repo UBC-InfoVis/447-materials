@@ -2,7 +2,7 @@
 
 *Out: Thu Jan 13 2022. Due: Fri Jan 28 2022, 6pm.*
 
-*Submit a zip file or each of the individual files to Gradescope before the due date*
+*Submit a zip file or each of the individual files to Gradescope before the due date. DO NOT upload any other files.* 
 - *index.html*
 - *main.js*
 - *scatterplot.js*
