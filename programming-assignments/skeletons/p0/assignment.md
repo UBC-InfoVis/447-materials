@@ -2,7 +2,11 @@
 
 *Out: Thu Jan 13 2022. Due: Fri Jan 28 2022, 6pm.*
 
-*Remember to submit a zip file of your repo to Gradescope before the due date*
+*Submit a zip file or each of the individual files to Gradescope before the due date*
+- *index.html*
+- *main.js*
+- *scatterplot.js*
+- *style.css*
 
 This programming assignment assumes that you have fulfilled all course prerequisites and followed along with the D3 tutorials.
 
@@ -12,7 +16,7 @@ We will use **git** repositories for all programming assignments and project mil
 
 We created a git repository in your github student account ([https://github.students.cs.ubc.ca/](https://github.students.cs.ubc.ca/)) that contains a basic template that should help you get started. A dataset is included in the /data folder. You will need to modify the .html, .js, and .css files as described below. Don't add new files.
 
-Submit the programming assignment by zipping the final version of your code and submitting it to Gradescope before the deadline. Work alone.
+Submit the programming assignment by zipping the above files, or choosing them individually in Gradescope and submitting it to Gradescope before the deadline. Work alone.
 
 ---
 
