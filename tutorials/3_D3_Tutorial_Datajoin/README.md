@@ -336,7 +336,7 @@ The final product of your code will look like this:
 
 We'll provide the interaction and animation code.
 
-Instead of more granular instructions, we provide instructions at a high level.
+We provide instructions at a high level here, but more granular instructions in the activity-template for this exercise.
 
 #### Activity (1)
 

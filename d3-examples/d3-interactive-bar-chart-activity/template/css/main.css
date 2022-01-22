@@ -1,0 +1,19 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+
+.axis line, .axis path {
+  fill: none;
+  stroke: #000;
+}
+
+.title {
+	text-anchor:middle;
+}
+
+.axis text {
+  font-size:10px;
+}
+
+.bar {
+  fill:green;
+  opacity:.4;
+}
