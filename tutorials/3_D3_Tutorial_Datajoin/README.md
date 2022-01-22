@@ -252,11 +252,122 @@ class MyChart {
 ```
 
 ## 4. <a name="nested">Enter, Update, Exit with Nested Elements</a>
+As you might have noticed, a useful tip to re-arranging svg elements is wrapping them in `<g>` group tags. This helps better organize the structure of the elements in our chart, and allows us to group and move elements together. When working with nested elements inside groups, we need to apply the enter-update pattern to nested elements.
+
+Nested and hierarchical elements often follow hierarchical data, like matrices. In many cases, we have to *transform* our flat data into a hierarchical form. D3 has built in functions for this, such as `[d3.rollup()](https://github.com/d3/d3-array/blob/main/README.md#rollup)`, or `[d3.groups()](https://github.com/d3/d3-array/blob/main/README.md#group)`.
+
+Let's say you have a table of fruits:
+```javascript
+let fruit = [
+	{"type": "grape", "amount": 100, "color": "green"},
+	{"type": "kiwi", "amount": 15, "color": "green"},
+	{"type": "banana", "amount": 7, "color": "yellow"},
+	{"type": "mango", "amount": 3, "color": "yellow"},
+	{"type": "strawberry", "amount": 31, "color": "red"},
+	{"type": "papaya", "amount": 1, "color": "yellow"},
+	{"type": "blueberry", "amount": 100, "color": "blue"}
+];
+```
+
+In order to group this by *color* of fruit, we can apply the groups function:
+```javascript
+let result = d3.groups(fruit, v => d3.sum(v, d => d.amount), d => d.color);
+
+// Result from d3.rollups
+result = [
+	["green", [
+			{"type": "grape", "amount": 100, "color": "green"},
+			{"type": "kiwi", "amount": 15, "color": "green"}
+		]
+	],
+	["yellow", [
+			{"type": "banana", "amount": 7, "color": "yellow"},
+			{"type": "mango", "amount": 3, "color": "yellow"},
+			{"type": "papaya", "amount": 1, "color": "yellow"}
+		]
+	],
+	["red", [
+			{"type": "strawberry", "amount": 31, "color": "red"}
+		]
+	],
+	["blue", [
+			{"type": "blueberry", "amount": 100, "color": "blue"}
+		]
+	]
+];
+```
+Rollups and groups are particularly useful for transforming flat data into groups of maps or arrays.
+
+With our data in a hierarchical format (i.e. a matrix, an array of arrays), we can create a nested selection. To join the colors to corresponding svg elements, first we join the outer array to the rows, then join the inner arrays to cells:
+```javascript
+// Generate 1 row for each fruit color
+let group = svg.selectAll('.row')
+				.data(result)
+				.append('g')
+				.attr('class', 'row');
+
+// Generate 1 circle for each fruit
+let fruits = group.selectAll('.fruit')
+				.data(d => d[1], d => d.type) // Get the array of objects and use the type as the key function
+				.append('circle')
+				.attr('class', 'fruit')
+				// Other code to generate rows based off of a categorical y-scale
+
+```
+The resulting selection will have a hierarchical structure that looks like this:
+![Fruit selection example](images/fruit-nest.png?raw=true "Fruit selection example")
+
+More complex versions of this will show up in the case-studies and on P1.
+-----
+### Examples
+
+We use this nested approach to organize and render the visualizations in both of the case-studies. You can look at the complete example of both on codesandbox or checkout the code from [Github](https://github.com/UBC-InfoVis/436V-materials/tree/main/case-studies).
+
+[![Measles case study](images/measles-case-study.png?raw=true "Measles case study")](https://codesandbox.io/s/github/UBC-InfoVis/436V-materials/tree/main/case-studies/case-study_measles-and-vaccines)
+
+[![Drought case study](images/drought-case-study.png?raw=true "Drought case study")](https://codesandbox.io/s/github/UBC-InfoVis/436V-materials/tree/main/case-studies/case-study_drought)
 
 ## 5. <a name="practice">Practice with enter-update-exit</a>
+The following activity is a more robust opportunity to visualize data with D3 and the enter-update pattern. The data for this activity contains estimates for alcohol consumption patterns at the U.S. state level in 2012.
+
+The final product of your code will look like this:
+
+![Activity Result 1](images/join-activity-1.png?raw=true "Activity Result 1")
+
+We'll provide the interaction and animation code.
+
+Instead of more granular instructions, we provide instructions at a high level.
+
+#### Activity (1)
+
+1. First clone our [d3-starter template](https://github.com/UBC-InfoVis/d3-starter-template), then start a local web server.
+
+2. Download the dataset `.csv` file from our [Github](https://github.com/UBC-InfoVis/datasets/blob/master/all_drinking.csv).
+
+3. Add a `<div>` element in the `<body>` tag of `index.html` where we will add our svg chart.
+
+4. **Use D3 to load the CSV file or Javascript array**
+
+5. **Prepare the data: Convert all numerical values to numbers.**
+
+6. **Append an empty svg and define its dimensions**
+
+7. **Initialize your scales and axes**
+	Set and define:
+	- xScale
+	- yScale
+	- xAxis
+	- yAxis
+
+8. **Draw your axes**
+
+9. **Draw the bars using the enter-update-exit pattern**
+	To test if this is working correctly, you can filter data using the buttons. If you have implemented the data-join correctly, the bars and axes will update accordingly to the filtered data.
+
 
 ---
 
 *Sources:*
 
 * [Harvard's visualization course (CS171)](https://www.cs171.org/)
+* [Mike Bostock - Nested selections](https://bost.ocks.org/mike/nest/)
