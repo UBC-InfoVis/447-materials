@@ -340,19 +340,19 @@ We provide instructions at a high level here, but more granular instructions in 
 
 #### Activity (1)
 
-1. First clone our [d3-starter template](https://github.com/UBC-InfoVis/d3-starter-template), then start a local web server.
+1. First clone the skeleton for this activity. [Tutorial 3 Template](https://github.com/UBC-InfoVis/436V-materials/tree/main/d3-examples/d3-interactive-bar-chart-activity/template), then start a local web server. *Note: This is the not the usual starter template!*
 
-2. Download the dataset `.csv` file from our [Github](https://github.com/UBC-InfoVis/datasets/blob/master/all_drinking.csv).
-
-3. Add a `<div>` element in the `<body>` tag of `index.html` where we will add our svg chart.
+2. If the dataset isn't included, download the dataset `.csv` file from our [Github](https://github.com/UBC-InfoVis/datasets/blob/master/all_drinking.csv).
 
 4. **Use D3 to load the CSV file or Javascript array**
 
 5. **Prepare the data: Convert all numerical values to numbers.**
 
-6. **Append an empty svg and define its dimensions**
+6. **Create a barchart using the provided class, and pass it filtered data.**
 
-7. **Initialize your scales and axes**
+7. **Append an empty svg and define its dimensions**
+
+8. **Initialize your scales and axes**
 	Set and define:
 	- xScale
 	- yScale
