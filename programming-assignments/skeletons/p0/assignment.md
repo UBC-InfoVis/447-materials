@@ -7,6 +7,7 @@
 - *main.js*
 - *scatterplot.js*
 - *style.css*
+- *README.md*
 
 This programming assignment assumes that you have fulfilled all course prerequisites and followed along with the D3 tutorials.
 
@@ -57,5 +58,5 @@ The final result of the *P0* assignment should look similar to the image below:
     * Code must be well commented (but not over commented).
     * Code must be consistently indented.
 * Citations and explanations
-    * Cite any external resources and explain exactly what modifications you have made in your README documentation. We created an empty `README.md` file in the root directory of the repo.
+    * Cite any external resources and explain exactly what modifications you have made in your README documentation. We created an empty `README.md` file in the root directory of the repo. You will submit this to Gradescope in addition to other code files.
 
