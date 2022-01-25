@@ -1,6 +1,6 @@
 # Programming Assignment 1
 
-*Due on Feb 11, 6:00pm.*
+*Due on Feb 11 2022, 6:00pm.*
 
 *Remember to submit all modified files to Gradescope before the due date*
 
@@ -90,7 +90,7 @@ We recommend that you break down the implementation into the following tasks. Pl
 5. **Add text annotations** 
 
 	* *Required:* Add a text label with the `name` of the costliest disaster of each year. The labels should be positioned below each semicircle and centered (hint: `.attr('text-anchor', 'middle')`). Make sure that all labels are also part of your enter-update-exit workflow.
-	* *Not required:* In our solution, we displayed the text label for Hurrican Harvey at the top and showed the estimated cost in billion dollars. We have also included the caption: *"Circles are sized proportionally to their cost in 2017 dollars."*. Those annotations are optional.
+	* *Not required:* In our solution, we displayed the text label for Hurricane Harvey at the top and showed the estimated cost in billion dollars. We have also included the caption: *"Circles are sized proportionally to their cost in 2017 dollars."*. Those annotations are optional.
 
 6. **Add a legend that also serves as an interactive filter**
 	
@@ -119,7 +119,7 @@ We recommend that you break down the implementation into the following tasks. Pl
 **Requirements:**
 
 * SVG details
-    * The SVG chart must have an id of "chart" have a width of 800px.
+    * The SVG chart must have an id of "chart" and have a width of 800px.
     * The SVG chart must be structured into nested SVG groups
     * The SVG chart must have reasonable margins and general spacing so as to be easily legible, not too cluttered, and not too spread out.
 * Scales
@@ -149,9 +149,6 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Inactive categories are shown in grey
     * Changes to which categories are active calls renderVis
     * Changes to which categories are active does not change the semicircle sizes
-* Robustness
-    * The visualization should work for different datasets in addition to the single test dataset that we provide, including but not limited to varying numbers of trials and varying trial average accuracies. 
-    * You should not assume that accuracies will be within the range [0, 1].
 * Code structure and format
     * Your code must follow reasonable style standards. 
     * Don’t leave any old, unused code snippets.
