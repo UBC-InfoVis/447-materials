@@ -1,8 +1,8 @@
 # Programming Assignment 1
 
-*Due on Feb 10, 11:59pm.*
+*Due on Feb 11, 6:00pm.*
 
-*Remember to submit your README.md file to Canvas before the due date*
+*Remember to submit all modified files to Gradescope before the due date*
 
 This programming assignment assumes that you have fulfilled all course prerequisites and followed along with the D3 tutorials.
 
@@ -12,7 +12,7 @@ We will use **git** repositories for all programming assignments and project mil
 
 We created a git repository in your github student account ([https://github.students.cs.ubc.ca/](https://github.students.cs.ubc.ca/)) that contains a template that should help you get started. The dataset is included in the /data folder. You will need to modify the .html, .js, and .css files as described below. Don't add new files.
 
-Submit the programming assignment by updating the given repository (`git push`). You can commit/push changes as often as you want before the deadline. Work alone.
+You must work alone. You may use the git repo however you would like, but make sure to submit any modified files to Gradescope before the deadline.
 
 We will also evaluate code readability and structure (add comments, indent code, use functions, ...).
 
@@ -59,7 +59,7 @@ We recommend that you break down the implementation into the following tasks. Pl
 
 	The visualization must be ready to accept new or filtered data. Thus, you must follow the enter-update-exit pattern (or the shortcut using the `join()` function) or otherwise we deduct a substantial number of points from your grade. Don’t remove all elements and redraw the chart from scratch every time the `renderVis()` function is called.
 	
-	We recommend that you draw the visualization using nested SVG groups (`<g></g>`) but it is not strictly required. 
+	You must draw the visualization using nested SVG groups (`<g></g>`). 
 		
 	* You can use `d3.groups(data, d => d.year)` to
 	group all rows in the dataset and create a 2-dimensional array. This preprocessing step makes it easier to visualize the data. 
@@ -113,4 +113,50 @@ We recommend that you break down the implementation into the following tasks. Pl
 
 8. **Clean up**: Make sure to remove old code snippets that are not needed anymore. Add code comments and indent code consistently.
 
-9. **Submit** your solution to the provided Github repo.
+9. **Submit**: your solution to Gradescope.
+
+
+**Requirements:**
+
+* SVG details
+    * The SVG chart must have an id of "chart" have a width of 800px.
+    * The SVG chart must be structured into nested SVG groups
+    * The SVG chart must have reasonable margins and general spacing so as to be easily legible, not too cluttered, and not too spread out.
+* Scales
+    * All years between 1980 and 2017 are shown on the y-axis on the left of the left 
+    * There are horizontal grid lines
+    * All months of the year are shown on the x-axis on the top of the chart
+* Marks
+    * One of the class names must be "mark"
+    * Must be semicircles
+    * Must be clipped if at the beginning or end of the year
+    * Semicircle radius must be between 4 and 140 pixels
+    * Semicircle radius must use a square root scale 
+    * Fill opacity must be 0.60
+    * Stroke colour must be #333
+    * Stroke width must be 0.3
+    * The costliest disaster of each year must have a text annotation
+    * Marks are coloured correctly according to their categories
+* Tooltips
+    * Every mark has a tooltip that displays on hover
+    * The tooltip contains the disaster title
+    * The tooltip contains the estimated cost in billion dollars
+* Legend
+    * All categories are shown with the correct colours
+    * Clicking on a category toggles its status
+    * All categories are shown when no categories are active
+    * Active categories are shown in black
+    * Inactive categories are shown in grey
+    * Changes to which categories are active calls renderVis
+    * Changes to which categories are active does not change the semicircle sizes
+* Robustness
+    * The visualization should work for different datasets in addition to the single test dataset that we provide, including but not limited to varying numbers of trials and varying trial average accuracies. 
+    * You should not assume that accuracies will be within the range [0, 1].
+* Code structure and format
+    * Your code must follow reasonable style standards. 
+    * Don’t leave any old, unused code snippets.
+    * Code must be well structured rather than copy/paste duplication or massive functions.
+    * Code must be well commented (but not over commented).
+    * Code must be consistently indented.
+* Citations and explanations
+    * Cite any external resources and explain exactly what modifications you have made in your README documentation. We created an empty `README.md` file in the root directory of the repo. You will submit this to Gradescope in addition to other code files.
