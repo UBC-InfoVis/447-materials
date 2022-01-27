@@ -1,0 +1,205 @@
+"state_name","state","sex","type","percent"
+"Alabama","AL","female","any",36.5
+"Alaska","AK","female","any",54.2
+"Arizona","AZ","female","any",50.6
+"Arkansas","AR","female","any",35.5
+"California","CA","female","any",49.4
+"Colorado","CO","female","any",57.8
+"Connecticut","CT","female","any",59.8
+"Delaware","DE","female","any",52.5
+"District Of Columbia","DC","female","any",58.3
+"Florida","FL","female","any",51.4
+"Georgia","GA","female","any",42.5
+"Hawaii","HI","female","any",43.9
+"Idaho","ID","female","any",45.3
+"Illinois","IL","female","any",54.8
+"Indiana","IN","female","any",44.3
+"Iowa","IA","female","any",54.7
+"Kansas","KS","female","any",45.6
+"Kentucky","KY","female","any",36
+"Louisiana","LA","female","any",43.4
+"Maine","ME","female","any",57.2
+"Maryland","MD","female","any",53.2
+"Massachusetts","MA","female","any",60.1
+"Michigan","MI","female","any",52.8
+"Minnesota","MN","female","any",61.3
+"Mississippi","MS","female","any",35.3
+"Missouri","MO","female","any",46.4
+"Montana","MT","female","any",57.4
+"Nebraska","NE","female","any",55.8
+"Nevada","NV","female","any",50.1
+"New Hampshire","NH","female","any",62.5
+"New Jersey","NJ","female","any",55.6
+"New Mexico","NM","female","any",42
+"New York","NY","female","any",53.6
+"North Carolina","NC","female","any",40.4
+"North Dakota","ND","female","any",57.2
+"Ohio","OH","female","any",48.8
+"Oklahoma","OK","female","any",38.5
+"Oregon","OR","female","any",57
+"Pennsylvania","PA","female","any",52.1
+"Rhode Island","RI","female","any",59.3
+"South Carolina","SC","female","any",41.2
+"South Dakota","SD","female","any",52.9
+"Tennessee","TN","female","any",34.7
+"Texas","TX","female","any",44.2
+"Utah","UT","female","any",24
+"Vermont","VT","female","any",62.9
+"Virginia","VA","female","any",49
+"Washington","WA","female","any",57.2
+"West Virginia","WV","female","any",26.6
+"Wisconsin","WI","female","any",61.5
+"Wyoming","WY","female","any",50.9
+"Alabama","AL","male","any",51
+"Alaska","AK","male","any",65
+"Arizona","AZ","male","any",61.2
+"Arkansas","AR","male","any",52.2
+"California","CA","male","any",63.8
+"Colorado","CO","male","any",69.3
+"Connecticut","CT","male","any",70.9
+"Delaware","DE","male","any",64.3
+"District Of Columbia","DC","male","any",72.1
+"Florida","FL","male","any",65
+"Georgia","GA","male","any",57.9
+"Hawaii","HI","male","any",63
+"Idaho","ID","male","any",54.9
+"Illinois","IL","male","any",67.7
+"Indiana","IN","male","any",60.1
+"Iowa","IA","male","any",69.9
+"Kansas","KS","male","any",61.3
+"Kentucky","KY","male","any",50.4
+"Louisiana","LA","male","any",60.3
+"Maine","ME","male","any",69.2
+"Maryland","MD","male","any",66.4
+"Massachusetts","MA","male","any",70.6
+"Michigan","MI","male","any",66.3
+"Minnesota","MN","male","any",72.1
+"Mississippi","MS","male","any",51.2
+"Missouri","MO","male","any",61
+"Montana","MT","male","any",67.7
+"Nebraska","NE","male","any",70.8
+"Nevada","NV","male","any",62.8
+"New Hampshire","NH","male","any",72.6
+"New Jersey","NJ","male","any",68.2
+"New Mexico","NM","male","any",56.1
+"New York","NY","male","any",66.5
+"North Carolina","NC","male","any",56
+"North Dakota","ND","male","any",72.1
+"Ohio","OH","male","any",63.8
+"Oklahoma","OK","male","any",54.4
+"Oregon","OR","male","any",66.6
+"Pennsylvania","PA","male","any",66.5
+"Rhode Island","RI","male","any",70
+"South Carolina","SC","male","any",59.1
+"South Dakota","SD","male","any",67.1
+"Tennessee","TN","male","any",47.9
+"Texas","TX","male","any",60.9
+"Utah","UT","male","any",32.6
+"Vermont","VT","male","any",74.2
+"Virginia","VA","male","any",62.5
+"Washington","WA","male","any",66.7
+"West Virginia","WV","male","any",44.3
+"Wisconsin","WI","male","any",72.4
+"Wyoming","WY","male","any",64.2
+"Alabama","AL","female","binge",7.9
+"Alaska","AK","female","binge",13.9
+"Arizona","AZ","female","binge",12
+"Arkansas","AR","female","binge",9
+"California","CA","female","binge",11.9
+"Colorado","CO","female","binge",14.6
+"Connecticut","CT","female","binge",13.1
+"Delaware","DE","female","binge",14.4
+"District Of Columbia","DC","female","binge",16.7
+"Florida","FL","female","binge",12.2
+"Georgia","GA","female","binge",9.8
+"Hawaii","HI","female","binge",13.8
+"Idaho","ID","female","binge",12.1
+"Illinois","IL","female","binge",15.9
+"Indiana","IN","female","binge",12.1
+"Iowa","IA","female","binge",17.1
+"Kansas","KS","female","binge",11.8
+"Kentucky","KY","female","binge",9.5
+"Louisiana","LA","female","binge",11.3
+"Maine","ME","female","binge",14
+"Maryland","MD","female","binge",13.3
+"Massachusetts","MA","female","binge",15.7
+"Michigan","MI","female","binge",14.8
+"Minnesota","MN","female","binge",17.3
+"Mississippi","MS","female","binge",7.5
+"Missouri","MO","female","binge",12.8
+"Montana","MT","female","binge",17.9
+"Nebraska","NE","female","binge",16
+"Nevada","NV","female","binge",11.8
+"New Hampshire","NH","female","binge",14.2
+"New Jersey","NJ","female","binge",13.2
+"New Mexico","NM","female","binge",10.3
+"New York","NY","female","binge",13.3
+"North Carolina","NC","female","binge",8.8
+"North Dakota","ND","female","binge",19
+"Ohio","OH","female","binge",14
+"Oklahoma","OK","female","binge",9.3
+"Oregon","OR","female","binge",13
+"Pennsylvania","PA","female","binge",13.3
+"Rhode Island","RI","female","binge",14.2
+"South Carolina","SC","female","binge",10.1
+"South Dakota","SD","female","binge",15.6
+"Tennessee","TN","female","binge",7.9
+"Texas","TX","female","binge",10.8
+"Utah","UT","female","binge",7.1
+"Vermont","VT","female","binge",14.9
+"Virginia","VA","female","binge",11
+"Washington","WA","female","binge",13.3
+"West Virginia","WV","female","binge",6.6
+"Wisconsin","WI","female","binge",19.7
+"Wyoming","WY","female","binge",13.2
+"Alabama","AL","male","binge",19.1
+"Alaska","AK","male","binge",23.3
+"Arizona","AZ","male","binge",24.4
+"Arkansas","AR","male","binge",20.4
+"California","CA","male","binge",23.6
+"Colorado","CO","male","binge",25.9
+"Connecticut","CT","male","binge",25.4
+"Delaware","DE","male","binge",26.5
+"District Of Columbia","DC","male","binge",27.5
+"Florida","FL","male","binge",23.8
+"Georgia","GA","male","binge",20.8
+"Hawaii","HI","male","binge",27.7
+"Idaho","ID","male","binge",22.7
+"Illinois","IL","male","binge",28.8
+"Indiana","IN","male","binge",24.1
+"Iowa","IA","male","binge",33.4
+"Kansas","KS","male","binge",24.6
+"Kentucky","KY","male","binge",21
+"Louisiana","LA","male","binge",25.4
+"Maine","ME","male","binge",26.8
+"Maryland","MD","male","binge",23.9
+"Massachusetts","MA","male","binge",26.9
+"Michigan","MI","male","binge",27.5
+"Minnesota","MN","male","binge",30.2
+"Mississippi","MS","male","binge",20
+"Missouri","MO","male","binge",27.5
+"Montana","MT","male","binge",30.3
+"Nebraska","NE","male","binge",31.2
+"Nevada","NV","male","binge",24.8
+"New Hampshire","NH","male","binge",26.2
+"New Jersey","NJ","male","binge",25.1
+"New Mexico","NM","male","binge",22.4
+"New York","NY","male","binge",25.3
+"North Carolina","NC","male","binge",20.4
+"North Dakota","ND","male","binge",33.7
+"Ohio","OH","male","binge",25.8
+"Oklahoma","OK","male","binge",21.8
+"Oregon","OR","male","binge",22.2
+"Pennsylvania","PA","male","binge",27.1
+"Rhode Island","RI","male","binge",27
+"South Carolina","SC","male","binge",23.5
+"South Dakota","SD","male","binge",30.9
+"Tennessee","TN","male","binge",17.4
+"Texas","TX","male","binge",24.5
+"Utah","UT","male","binge",15.3
+"Vermont","VT","male","binge",28.3
+"Virginia","VA","male","binge",20.8
+"Washington","WA","male","binge",23
+"West Virginia","WV","male","binge",18.1
+"Wisconsin","WI","male","binge",32.7
+"Wyoming","WY","male","binge",25.7

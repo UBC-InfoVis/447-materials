@@ -31,7 +31,6 @@ d3.csv('data/all_drinking.csv').then(data => {
 
 	// Create a new bar chart instance and pass the filtered data to the bar chart class
 	let barchart = new Barchart({ parentElement: '#vis'}, filterData(data));
-
 	// Show chart
 	barchart.updateVis();
 
