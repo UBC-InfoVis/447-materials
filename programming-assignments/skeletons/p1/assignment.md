@@ -12,7 +12,13 @@ We will use **git** repositories for all programming assignments and project mil
 
 We created a git repository in your github student account ([https://github.students.cs.ubc.ca/](https://github.students.cs.ubc.ca/)) that contains a template that should help you get started. The dataset is included in the /data folder. You will need to modify the .html, .js, and .css files as described below. Don't add new files.
 
-You must work alone. You may use the git repo however you would like, but make sure to submit any modified files to Gradescope before the deadline.
+You must work alone. You may use the git repo however you would like, but make sure to submit the following files to Gradescope before the deadline:
+* index.html
+* main.js
+* timeline.js
+* style.css
+* README.md
+* any other modified files
 
 We will also evaluate code readability and structure (add comments, indent code, use functions, ...).
 
@@ -127,7 +133,7 @@ We recommend that you break down the implementation into the following tasks. Pl
     * There are horizontal grid lines
     * All months of the year are shown on the x-axis on the top of the chart
 * Marks
-    * One of the class names must be "mark"
+    * Each mark must have the class name "mark"
     * Must be semicircles
     * Must be clipped if at the beginning or end of the year
     * Semicircle radius must be between 4 and 140 pixels
