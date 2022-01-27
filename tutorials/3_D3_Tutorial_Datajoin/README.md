@@ -271,9 +271,9 @@ let fruit = [
 
 In order to group this by *color* of fruit, we can apply the groups function:
 ```javascript
-let result = d3.groups(fruit, v => d3.sum(v, d => d.amount), d => d.color);
+let result = d3.groups(fruit, d => d.color);
 
-// Result from d3.rollups
+// Result from d3.groups
 result = [
 	["green", [
 			{"type": "grape", "amount": 100, "color": "green"},
