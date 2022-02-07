@@ -153,7 +153,7 @@ We recommend that you break down the implementation into the following tasks. Pl
     * All categories are shown when no categories are active
     * Active categories are shown in black
     * Inactive categories are shown in grey
-    * Changes to which categories are active calls renderVis
+    * Changes to which categories are active results in a call to renderVis
     * Changes to which categories are active does not change the semicircle sizes
 * Code structure and format
     * Your code must follow reasonable style standards. 
