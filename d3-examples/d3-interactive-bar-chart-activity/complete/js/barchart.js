@@ -122,13 +122,12 @@ class Barchart {
       // Fill out renderVis
     let vis = this;
 
-    let bars = vis.chart.selectAll('.bars')
+    let bars = vis.chart.selectAll('.bar')
         .data(vis.data);
 
       let barEnter = bars.enter()
-          .append('rect')
-          .attr('class', 'bars')
-          .attr('test', d => { console.log(d); return 0});
+        .append('rect')
+        .attr('class', 'bar');
 
     barEnter.merge(bars) // enter + update passing the selection to merge
         .attr('x', (d) => vis.xScale(vis.xValue(d)))
