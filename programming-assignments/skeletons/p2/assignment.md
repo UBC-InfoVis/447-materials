@@ -1,8 +1,8 @@
 # Programming Assignment 2
 
-*Due on Mar 3, 11:59pm.*
+*Due on Mar 4 2022 at 6pm.*
 
-*Remember to submit your README.md file to Canvas before the due date*
+*Remember to submit all modified files to Gradescope before the due date*
 
 This programming assignment assumes that you have fulfilled all course prerequisites and followed along with the D3 tutorials.
 
@@ -10,9 +10,17 @@ This programming assignment assumes that you have fulfilled all course prerequis
 
 We will use **git** repositories for all programming assignments and project milestones. You should already be well acquainted with the process and all necessary git commands from the previous programming assignment.
 
-We created a git repository in your github student account ([https://github.students.cs.ubc.ca/](https://github.students.cs.ubc.ca/)) that contains a template that should help you get started. The dataset is included in the /data folder. You will need to modify the .html, .js, and .css files as described below. You can add files but it is not necessary.
+We created a git repository in your github student account ([https://github.students.cs.ubc.ca/](https://github.students.cs.ubc.ca/)) that contains a template that should help you get started. The dataset is included in the /data folder. You will need to modify the .html, .js, and .css files as described below. Don't add new files.
 
-Submit the programming assignment by updating the given repository (`git push`). You can commit/push changes as often as you want before the deadline. Work alone.
+You must work alone. You may use the git repo however you would like, but make sure to submit the following files to Gradescope before the deadline:
+* index.html
+* main.js
+* barChart.js
+* lexisChart.js
+* scatterplot.js
+* style.css
+* README.md
+* any other modified files
 
 We will also evaluate code readability and structure (add comments, indent code, use functions, ...).
 
@@ -99,4 +107,50 @@ We recommend that you break down the implementation into the following tasks. Pl
 
 8. **Clean up**: Make sure to remove old code snippets that are not needed anymore. Add code comments and indent code consistently.
 
-9. **Submit** your solution to the provided Github repo.
+9. **Submit** your solution to Gradescope.
+
+**Requirements:**
+
+* SVG details
+    * The SVG chart must have an id of "chart"
+    * The SVG chart must be structured into nested SVG groups
+    * The SVG chart must have reasonable margins and general spacing so as to be easily legible, not too cluttered, and not too spread out
+* Lexis chart
+    * Age is on the y-axis and year is on the x-axis
+    * Axes are clean, titled, and formatted well
+    * Each mark must have the class name "arrow"
+    * Each mark is in the shape of an arrow
+    * Each arrow starts and ends at the correct places
+    * Some arrows are highlighted and have rotated labels
+    * Selecting a point in the scatter plot highlights and adds a label for the selected politician
+    * Arrows become more prominent when hovered over
+    * Arrows have tooltips that show name, country, start and end year, age when they took office, total duration, and GDP per capita (if available)
+* Bar chart
+    * Count is on the y-axis and gender is on the x-axis
+    * Axes are clean, titled, and formatted well
+    * Horizontal gridlines are visible
+    * Each mark must have the class name "bar"
+    * The bars have the correct heights for each filter in the dropdown
+    * Hovering over a bar outlines it
+    * Clicking a bar darkens it
+    * Clicking on an unselected bar filters the data to that gender
+    * Clicking on a selected bar removes the filter on that gender
+* Scatter plot
+    * Age is on the y-axis and GDP per capita is on the x-axis
+    * Axes are clean, titled, and formatted well
+    * Horizontal and vertical gridlines are visible
+    * Each mark must have the class name "point"
+    * The points are at the correct locations
+    * Points that are filtered out by the dropdown have lowered opacity
+    * Hovering over a point darkens it and adds an outline
+    * Clicking on an unselected point highlights it
+    * Clicking on a selected point unhighlights it
+    * Unfiltered points have tooltips that show name, country, start and end year, age when they took office, total duration, and GDP per capita (if available)
+* Code structure and format
+    * Your code must follow reasonable style standards. 
+    * Don’t leave any old, unused code snippets.
+    * Code must be well structured rather than copy/paste duplication or massive functions.
+    * Code must be well commented (but not over commented).
+    * Code must be consistently indented.
+* Citations and explanations
+    * Cite any external resources and explain exactly what modifications you have made in your README documentation. We created an empty `README.md` file in the root directory of the repo. You will submit this to Gradescope in addition to other code files.
