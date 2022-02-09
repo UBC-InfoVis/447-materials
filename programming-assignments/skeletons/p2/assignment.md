@@ -38,7 +38,7 @@ The goal of this assignment is to implement a D3 visualization with three linked
 
 The final result should look similar to the image below but you can make some style changes and arrange the views differently.
 
-**We have a recorded a [video that shows the required interactions](https://www.students.cs.ubc.ca/~cs-436v/21Jan/assignments/p2-demo.mp4).**
+**We have a recorded a [video that shows the required interactions](https://github.com/UBC-InfoVis/436V-materials/blob/main/programming-assignments/skeletons/p2/p2-demo.mp4).**
 
 ![Result](result.png?raw=true "Result")
 
@@ -64,7 +64,7 @@ We recommend that you break down the implementation into the following tasks. Pl
 	* `age` is shown on the y-axis and `year` on the x-axis. You can set the input domains of the two linear linear scales manually, so that the axes remain constant although filters or selections may change (e.g., age: [25,95] and year: [1950,2021]).
 	* The lexis chart is similar to a scatter plot but instead of point marks, you need to draw lines/arrows. The coordinates for the lines are: x1=`start_year`, x2=`end_year`, y1=`start_age`, and y2=`end_age`.
 	* The D3 code for creating arrowheads (SVG markers) is included in `lexisChart.js`. The SVG markers are initialized with an id (e.g., `#arrow-head`) and can then be applied to SVG lines using D3 (i.e., `.attr('marker-end', 'url(#arrow-head)')`)
- or CSS (i.e., `marker-end: url(#arrow-head)`)
+ or CSS (i.e., `marker-end: url(#arrow-head)`). To learn more about how the marker ends work, see [this short explainer](https://observablehq.com/@stvkas/interacting-with-marker-ends) made by Steve Kasica.
  	* Arrows can have 3 different styles:
  		1. ***Default***
  		2. ***Highlighted***: Some politicians are highlighted in the visualization and their name is displayed next to the arrow. For example, adjust the colour and the stroke width. Whether an arrow is highlighted is determined by the data attribute `label` (1=highlight). *Hint: you can use transform to rotate SVG text labels a few degrees:*
@@ -122,6 +122,7 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Each arrow starts and ends at the correct places
     * Some arrows are highlighted and have rotated labels
     * Selecting a point in the scatter plot highlights and adds a label for the selected politician
+    * Changing the dropdown filter or gender filter clears selected arrows
     * Arrows become more prominent when hovered over
     * Arrows have tooltips that show name, country, start and end year, age when they took office, total duration, and GDP per capita (if available)
 * Bar chart
@@ -133,7 +134,7 @@ We recommend that you break down the implementation into the following tasks. Pl
     * The bars have the correct heights for each filter in the dropdown
     * Hovering over a bar outlines it
     * Clicking a bar darkens it
-    * Clicking on an unselected bar filters the data to that gender
+    * Clicking on an unselected bar filters the data to that gender and deselects the other gender if it is selected
     * Clicking on a selected bar removes the filter on that gender
 * Scatter plot
     * The SVG chart must have an id of "scatter-plot"
@@ -143,10 +144,11 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Each mark must have the class name "point"
     * The points are at the correct locations
     * Points that are filtered out by the dropdown have lowered opacity
+    * Changing the dropdown filter or gender filter clears selected circles
     * Hovering over a point darkens it and adds an outline
-    * Clicking on an unselected point highlights it
+    * Clicking on an unselected point highlights it and deselects any previously selected point
     * Clicking on a selected point unhighlights it
-    * Unfiltered points have tooltips that show name, country, start and end year, age when they took office, total duration, and GDP per capita (if available)
+    * Unfiltered points have tooltips that show name, country, start and end year, age when they took office, total duration, and GDP per capita (if available, otherwise show nothing or describe it as missing rather than leaving it as null or 0)
 * Code structure and format
     * Your code must follow reasonable style standards. 
     * Don’t leave any old, unused code snippets.
