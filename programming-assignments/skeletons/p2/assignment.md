@@ -144,10 +144,12 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Each mark must have the class name "point"
     * The points are at the correct locations
     * Points that are filtered out by the dropdown have lowered opacity
-    * Changing the dropdown filter or gender filter clears selected circles
-    * Hovering over a point darkens it and adds an outline
+    * Changing the dropdown filter or bar chart gender filter clears selected circles
+    * Hovering over an included point darkens it and adds an outline
+    * Hovering over an unincluded point (one that is greyed out via filtering) does not do anything
     * Clicking on an unselected point highlights it and deselects any previously selected point
     * Clicking on a selected point unhighlights it
+    * Clicking on an unincluded point does nothing
     * Unfiltered points have tooltips that show name, country, start and end year, age when they took office, total duration, and GDP per capita (if available, otherwise show nothing or describe it as missing rather than leaving it as null or 0)
 * Code structure and format
     * Your code must follow reasonable style standards. 
@@ -157,3 +159,5 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Code must be consistently indented.
 * Citations and explanations
     * Cite any external resources and explain exactly what modifications you have made in your README documentation. We created an empty `README.md` file in the root directory of the repo. You will submit this to Gradescope in addition to other code files.
+* Other
+    * Admin penalties up to 20% for not following instructions
