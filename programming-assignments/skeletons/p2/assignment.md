@@ -112,10 +112,9 @@ We recommend that you break down the implementation into the following tasks. Pl
 **Requirements:**
 
 * SVG details
-    * The SVG chart must have an id of "chart"
-    * The SVG chart must be structured into nested SVG groups
     * The SVG chart must have reasonable margins and general spacing so as to be easily legible, not too cluttered, and not too spread out
 * Lexis chart
+    * The SVG chart must have an id of "lexis-chart"
     * Age is on the y-axis and year is on the x-axis
     * Axes are clean, titled, and formatted well
     * Each mark must have the class name "arrow"
@@ -126,6 +125,7 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Arrows become more prominent when hovered over
     * Arrows have tooltips that show name, country, start and end year, age when they took office, total duration, and GDP per capita (if available)
 * Bar chart
+    * The SVG chart must have an id of "bar-chart"
     * Count is on the y-axis and gender is on the x-axis
     * Axes are clean, titled, and formatted well
     * Horizontal gridlines are visible
@@ -136,6 +136,7 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Clicking on an unselected bar filters the data to that gender
     * Clicking on a selected bar removes the filter on that gender
 * Scatter plot
+    * The SVG chart must have an id of "scatter-plot"
     * Age is on the y-axis and GDP per capita is on the x-axis
     * Axes are clean, titled, and formatted well
     * Horizontal and vertical gridlines are visible
