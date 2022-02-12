@@ -32,6 +32,7 @@ The final result of the *P0* assignment should look similar to the image below:
 **Requirements:**
 
 * SVG details
+    * The SVG chart must have an id of "vis"
     * The SVG chart must have a width of 500px and a height of 250px. 
     * The SVG chart must have reasonable margins and general spacing so as to be easily legible, not too cluttered, and not too spread out.
 * Scales
@@ -41,6 +42,7 @@ The final result of the *P0* assignment should look similar to the image below:
     * The y-axis labels must include “Trial” before the numbers, i.e. “Trial 1”, “Trial 2”, etc.
     * The y-axis must be shown in ascending order.
 * Point marks
+    * The point marks must have class name "point"
     * The point marks must be circles of radius 8px and they must use fill opacity to indicate overlapping marks. 
     * You may choose the fill colour.
 * Summary statistics
