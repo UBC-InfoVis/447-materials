@@ -70,7 +70,7 @@ We recommend that you break down the implementation into the following tasks. Pl
 	* You can use `d3.groups(data, d => d.year)` to
 	group all rows in the dataset and create a 2-dimensional array. This preprocessing step makes it easier to visualize the data. 
 	* 1st level: Create a group for each year and set the position using SVG's `translate()` transformation.
-	* 2nd level: Within each year group, create a group for each disaster and position it based on the *day of the year*.
+	* 2nd level: Within each year group, create a group for each disaster (each individual distaster, NOT disaster category) and position it based on the *day of the year*.
 	* 3rd level: Within each disaster, create a path element for the semicircle, and a text label for the largest disaster per year (see Task 5).
 	
 	You can get the SVG path for a semicircle using the arc generator: 
