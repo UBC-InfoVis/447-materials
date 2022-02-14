@@ -27,7 +27,7 @@ GeoJSON is a JSON-based standard for encoding a variety of geographic data struc
 		  "type": "Feature",
 		  "geometry": {
 		    "type": "Point",
-		    "coordinates": [51.507351, -0.127758]
+		    "coordinates": [-0.127758, 51.507351]
 		  },
 		  "properties": {
 		    "name": "London"
