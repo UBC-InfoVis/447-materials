@@ -38,7 +38,7 @@ The goal of this assignment is to implement a D3 visualization with three linked
 
 The final result should look similar to the image below but you can make some style changes and arrange the views differently.
 
-**We have a recorded a [video that shows the required interactions](https://github.com/UBC-InfoVis/436V-materials/blob/main/programming-assignments/skeletons/p2/p2-demo.mp4).**
+**We have a recorded a [video that shows the required interactions](https://github.com/UBC-InfoVis/436V-materials/blob/22Jan/programming-assignments/skeletons/p2-interaction-walkthrough.mp4).**
 
 ![Result](result.png?raw=true "Result")
 
