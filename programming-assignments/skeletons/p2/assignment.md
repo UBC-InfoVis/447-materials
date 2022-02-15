@@ -42,16 +42,16 @@ The final result should look similar to the image below but you can make some st
 
 ![Result](result.png?raw=true "Result")
 
-The most important part of this assignment is to implement linked interactions. Creating a bar chart or scatter plot should not pose a challenge anymore. You can also reuse code from tutorials, case studies, and previous assignments. 
+The most important part of this assignment is to implement linked interactions. Creating a bar chart or scatter plot should not pose a challenge anymore. You can also reuse code from tutorials, case studies, and previous assignments.
 
 We recommend that you break down the implementation into the following tasks. Please read the instructions carefully as we provide more details about the requirements your visualization must need to fulfill.
 
-1. **Familiarize yourself with the given template** (`index.html`, `main.js`, `lexisChart.js`, `barChart.js`, `scatterPlot.js`) **and the dataset** (`leaderlist.csv`). 
+1. **Familiarize yourself with the given template** (`index.html`, `main.js`, `lexisChart.js`, `barChart.js`, `scatterPlot.js`) **and the dataset** (`leaderlist.csv`).
 	* The CSV data is loaded in the `main.js` file and we converted string columns to numbers.
 	* You will need the following columns:
-		
+
 		![Data desc](data_desc.png?raw=true "Data desc")
-		
+
 	* Rough class structures of the three views are provided. You don't strictly need to use those templates and you can change all dimensions but you need to make sure that your code is well-structured.
 	*  All three charts need to be created using D3's enter-update-exit pattern or using the `join()` function. Don't remove and redraw all elements when a chart gets updated.
 
@@ -68,7 +68,7 @@ We recommend that you break down the implementation into the following tasks. Pl
  	* Arrows can have 3 different styles:
  		1. ***Default***
  		2. ***Highlighted***: Some politicians are highlighted in the visualization and their name is displayed next to the arrow. For example, adjust the colour and the stroke width. Whether an arrow is highlighted is determined by the data attribute `label` (1=highlight). *Hint: you can use transform to rotate SVG text labels a few degrees:*
-	 		
+
 	 		```js
 	 		.attr('transform', d => `translate(X-POSITION,Y-POSITION) rotate(-20)`);
 	 		```
@@ -76,7 +76,7 @@ We recommend that you break down the implementation into the following tasks. Pl
 	* Show tooltips on `mouseover` with the following information: name, country, start and end year, age when they took office, total duration, and GDP per capita (if available).
 
 		![Tooltip](tooltip.png?raw=true "Tooltip")
-	
+
 4. **Bar chart**
 
 	* Count and visualize the number of female and male politicians. *Hint: You may want to use `d3.rollups()`*.
@@ -90,29 +90,38 @@ We recommend that you break down the implementation into the following tasks. Pl
 6. **Connect views**
 
 	1. ***Bar chart → lexis chart***
-		
-		Use the bar chart as an interactive filter for the lexis chart. For example, when users click on the `female` option, only female politicians are shown in the lexis chart. Another click on an active option resets the filter.
-		
+
+		- Use the bar chart as an interactive filter for the lexis chart. For example, when users click on the `female` option, only female politicians are shown in the lexis chart. Another click on an active option resets the filter.
+		- If arrows are currently highlighted, arrows are only deselected if the bar chart filters them out. For example, if Trudeau is selected in the lexis chart, and the `male` bar is selected, the arrow representing Trudeau is NOT deselected.
+
 	2. ***Bar chart → scatter plot***
-	
-		Points in the scatter plot should not be hidden when a gender is selected. Instead, you need to adjust the *fill opacity*. For instance, set the opacity to `0.7` for active and `0.15` for inactive points. Tooltips should only work on active points in the scatter plot.
-		 
+
+		- Points in the scatter plot should not be hidden when a gender is selected. Instead, you need to adjust the *fill opacity*. For instance, set the opacity to `0.7` for active and `0.15` for inactive points.
+        - If points in the scatter plot are highlighted, selecting a gender in the bar chart clears (unselects) highlighted points that are filtered out. (See bullet 2 of bar chart -> lexis chart)
+        - Remove interaction of filtered out points. Hovering over filtered out points no longer darkens or adds an outline, and you can no longer select them to be highlighted. Tooltips should only work on active points in the scatter plot.
+
 		 ![Active-Inactive](active_inactive.png?raw=true "Active-Inactive")
-		
+
 	3. ***Scatter plot → lexis chart***
-	
-		When users click on a point in the scatter plot, the fill colour changes and the politician is highlighted in the lexis chart. A second click resets everything.
-		
+
+		- When users click on a point in the scatter plot, the fill colour changes and the politician is highlighted in the lexis chart.
+		- When users click on multiple points, they should all be highlighted. Clicking outside any point resets filtering entirely.
+
+   4. ***Lexis chart → scatter plot***
+        - When clicking on an arrow in the lexis chart, the corresponding point should also highlight in the scatter plot. Because we are filtering where the GDP is known, it is possible that clicking on some arrows will not have corresponding dots in the scatter plot.
+
 7. Add axis/chart **titles**.
 
 8. **Clean up**: Make sure to remove old code snippets that are not needed anymore. Add code comments and indent code consistently.
 
-9. **Submit** your solution to Gradescope.
+9.  **Submit** your solution to Gradescope.
 
 **Requirements:**
 
 * SVG details
     * The SVG chart must have reasonable margins and general spacing so as to be easily legible, not too cluttered, and not too spread out
+* Dropdown filter
+    * You must use the supplied dropdown filter as the control to filter your chart
 * Lexis chart
     * The SVG chart must have an id of "lexis-chart"
     * Age is on the y-axis and year is on the x-axis
@@ -125,17 +134,20 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Changing the dropdown filter or gender filter clears selected arrows
     * Arrows become more prominent when hovered over
     * Arrows have tooltips that show name, country, start and end year, age when they took office, total duration, and GDP per capita (if available)
+    * Selecting an arrow in the lexis chart highlights the corresponding dot in the scatter plot if it exists
 * Bar chart
     * The SVG chart must have an id of "bar-chart"
     * Count is on the y-axis and gender is on the x-axis
     * Axes are clean, titled, and formatted well
     * Horizontal gridlines are visible
+    * Vertical gridlines are removed
     * Each mark must have the class name "bar"
     * The bars have the correct heights for each filter in the dropdown
     * Hovering over a bar outlines it
     * Clicking a bar darkens it
     * Clicking on an unselected bar filters the data to that gender and deselects the other gender if it is selected
     * Clicking on a selected bar removes the filter on that gender
+    * Clicking on an bar when points or lexis arrows are selected only clears the selection if the filter removes it from the included group
 * Scatter plot
     * The SVG chart must have an id of "scatter-plot"
     * Age is on the y-axis and GDP per capita is on the x-axis
@@ -147,12 +159,13 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Changing the dropdown filter or bar chart gender filter clears selected circles
     * Hovering over an included point darkens it and adds an outline
     * Hovering over an unincluded point (one that is greyed out via filtering) does not do anything
-    * Clicking on an unselected point highlights it and deselects any previously selected point
+    * Clicking on an unselected point highlights it
     * Clicking on a selected point unhighlights it
     * Clicking on an unincluded point does nothing
+    * Clicking anywhere on the scatter plot clears the existing selected points
     * Unfiltered points have tooltips that show name, country, start and end year, age when they took office, total duration, and GDP per capita (if available, otherwise show nothing or describe it as missing rather than leaving it as null or 0)
 * Code structure and format
-    * Your code must follow reasonable style standards. 
+    * Your code must follow reasonable style standards.
     * Don’t leave any old, unused code snippets.
     * Code must be well structured rather than copy/paste duplication or massive functions.
     * Code must be well commented (but not over commented).
