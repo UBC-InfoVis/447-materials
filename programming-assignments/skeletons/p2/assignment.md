@@ -42,7 +42,7 @@ The final result should look similar to the image below but you can make some st
 
 ![Result](result.png?raw=true "Result")
 
-The most important part of this assignment is to implement linked interactions. Creating a bar chart or scatter plot should not pose a challenge anymore. You can also reuse code from tutorials, case studies, and previous assignments.
+The most important part of this assignment is to implement linked interactions. Creating a bar chart or scatter plot should not pose a challenge anymore. You can also reuse code from tutorials, case studies, and previous assignments. We highly recommend you to use the `join` function to handle your data-join, as there is no need for nested groups in this assignment.
 
 We recommend that you break down the implementation into the following tasks. Please read the instructions carefully as we provide more details about the requirements your visualization must need to fulfill.
 
@@ -122,6 +122,7 @@ We recommend that you break down the implementation into the following tasks. Pl
     * The SVG chart must have reasonable margins and general spacing so as to be easily legible, not too cluttered, and not too spread out
 * Dropdown filter
     * You must use the supplied dropdown filter as the control to filter your chart
+    * Changing the dropdown filter keeps the currently selected elements on all charts
 * Lexis chart
     * The SVG chart must have an id of "lexis-chart"
     * Age is on the y-axis and year is on the x-axis
@@ -131,7 +132,6 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Each arrow starts and ends at the correct places
     * Some arrows are highlighted and have rotated labels
     * Selecting a point in the scatter plot highlights and adds a label for the selected politician
-    * Changing the dropdown filter or gender filter clears selected arrows
     * Arrows become more prominent when hovered over
     * Arrows have tooltips that show name, country, start and end year, age when they took office, total duration, and GDP per capita (if available)
     * Selecting an arrow in the lexis chart highlights the corresponding dot in the scatter plot if it exists
