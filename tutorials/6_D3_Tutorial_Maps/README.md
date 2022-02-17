@@ -421,7 +421,7 @@ See the full example on [codesandbox](https://githubbox.com/UBC-InfoVis/2021-436
 
 We can add interactive components to a D3 vector map, such as tooltips or [zooming and panning](https://bl.ocks.org/d3noob/8498ab07f1beb8da0509cd8640452291), but the functionality is limited and the information density is usually not comparable to *interactive tile maps*, with Google Maps being the most prominent example. For many cases, a basic vector map is appropriate because we do not want to have additional layers or information that distracts from the actual data we need to communicate or analyze.
 
-For some tasks, an interactive, zoomable map may be beneficial. For example, in our case study [Vancouver Bike Sharing](todo), we visualize bikeways and available bikes/slots at docking stations. In this specific scenario, it is helpful for users to zoom in and out to see roads, terrain, etc. at different levels of granularity. We can also use the geo location to automatically zoom in and show the nearest bike sharing stations.
+For some tasks, an interactive, zoomable map may be beneficial. For example on Google maps, it can be helpful for users to zoom in and out to see roads, terrain, road specific information, etc. at different levels of granularity. We can also use the geo location to automatically zoom in and show the nearest shops in a given location.
 
 In the following, we will provide a brief overview of [Leaflet](https://leafletjs.com/) which is an open-source alternative to Google Maps. In our [case study](todo), we will guide you through an implementation that visualizes live data from an API using a Leaflet map.
 
