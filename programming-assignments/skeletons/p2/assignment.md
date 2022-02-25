@@ -57,12 +57,13 @@ We recommend that you break down the implementation into the following tasks. Pl
 
 2. **Global filter**
 
-	We have added a select box to the `index.html` file that allows users to choose a group of countries. Whenever the selection changes, you need to filter the loaded dataset and update all views. One option is always selected (default option = oecd).
+	We have added a select box to the `index.html` file that allows users to choose a group of countries. Whenever the selection changes, you need to filter the loaded dataset and update all views. One option is always selected (default option = oecd). In addition to this select box, filter the global data where duration > 0. 
 
 3. **Lexis chart**
 
-	* `age` is shown on the y-axis and `year` on the x-axis. You can set the input domains of the two linear linear scales manually, so that the axes remain constant although filters or selections may change (e.g., age: [25,95] and year: [1950,2021]).
+	* `age` is shown on the y-axis and `year` on the x-axis. You can set the input domains of the two linear linear scales manually, so that the axes remain constant although filters or selections may change (e.g., age: [25,95] and year: [1950,2021]). There will be arrows outside of these bounds, and they should be masked with a chart-mask, similar to P1. 
 	* The lexis chart is similar to a scatter plot but instead of point marks, you need to draw lines/arrows. The coordinates for the lines are: x1=`start_year`, x2=`end_year`, y1=`start_age`, and y2=`end_age`.
+	* There 
 	* The D3 code for creating arrowheads (SVG markers) is included in `lexisChart.js`. The SVG markers are initialized with an id (e.g., `#arrow-head`) and can then be applied to SVG lines using D3 (i.e., `.attr('marker-end', 'url(#arrow-head)')`)
  or CSS (i.e., `marker-end: url(#arrow-head)`). To learn more about how the marker ends work, see [this short explainer](https://observablehq.com/@stvkas/interacting-with-marker-ends) made by Steve Kasica.
  	* Arrows can have 3 different styles:
@@ -155,8 +156,7 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Horizontal and vertical gridlines are visible
     * Each mark must have the class name "point"
     * The points are at the correct locations
-    * Points that are filtered out by the dropdown have lowered opacity
-    * Changing the dropdown filter or bar chart gender filter clears selected circles
+    * Changing the dropdown filter clears all selected circles and arrows
     * Hovering over an included point darkens it and adds an outline
     * Hovering over an unincluded point (one that is greyed out via filtering) does not do anything
     * Clicking on an unselected point highlights it
