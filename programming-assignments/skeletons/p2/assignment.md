@@ -67,6 +67,7 @@ We recommend that you break down the implementation into the following tasks. Pl
 3. **Lexis chart**
 
 	* `age` is shown on the y-axis and `year` on the x-axis. You can set the input domains of the two linear linear scales to be static, so that the axes remain constant although filters or selections may change (e.g., age: [25,95] and year: [1950,2021]). There will be arrows outside of these bounds, and they should be masked with a chart-mask, similar to P1.
+	* Include a label for `Age` for the y-axis in the top-left
 	* The lexis chart is similar to a scatter plot but instead of point marks, you need to draw lines/arrows. The coordinates for the lines are: x1=`start_year`, x2=`end_year`, y1=`start_age`, and y2=`end_age`.
     * When arrows are selected, they should change their styles to be highlighted, and the corresponding label should appear
 	* Multiple arrows may be selected
@@ -90,6 +91,7 @@ We recommend that you break down the implementation into the following tasks. Pl
 	* Generally, there will be only female/male politicians, but do not make the assumption that there will be.
 	* These counts will update as the global filter changes
 	* When a bar is selected, it should be darkened
+    * Include a label for `Gender` for the y-axis in the top-left
 
 5. **Scatter plot**
 
@@ -101,6 +103,7 @@ We recommend that you break down the implementation into the following tasks. Pl
 	* Use a dynamic domain for the x-axis
 	* Selecting a point on the scatter plot causes it to be highlighted
 	* Multiple dots may be selected
+	* Include a labels for both axes: `Age` for the y-axis in the top-left and `GDP per Capita (US$)` for the x-axis in the bottom-right
 
 6. **Connect views**
 
@@ -149,7 +152,9 @@ We recommend that you break down the implementation into the following tasks. Pl
 * Lexis chart
     * The SVG chart must have an id of "lexis-chart"
     * Age is on the y-axis and year is on the x-axis
+    * Y-axis has the label "Age" in the top left
     * Axes are clean, titled, and formatted well
+    * All gridlines (horizontal and vertical) are removed
     * Each mark must have the class name "arrow"
     * Each mark is in the shape of an arrow
     * Each arrow starts and ends at the correct places
@@ -160,6 +165,7 @@ We recommend that you break down the implementation into the following tasks. Pl
 * Bar chart
     * The SVG chart must have an id of "bar-chart"
     * Count is on the y-axis and gender is on the x-axis
+    * Y-axis has the label "Gender" in the top left
     * Axes are clean, titled, and formatted well
     * Horizontal gridlines are visible
     * Vertical gridlines are removed
@@ -172,6 +178,8 @@ We recommend that you break down the implementation into the following tasks. Pl
 * Scatter plot
     * The SVG chart must have an id of "scatter-plot"
     * Age is on the y-axis and GDP per capita is on the x-axis
+    * Y-axis has the label "Age" in the top left
+    * X-axis has the label "GDP per Capita (US$)" in the bottom right
     * Axes are clean, titled, and formatted well
     * Horizontal and vertical gridlines are visible
     * Each mark must have the class name "point"
