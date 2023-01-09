@@ -163,3 +163,5 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Code must be consistently indented.
 * Citations and explanations
     * Cite any external resources and explain exactly what modifications you have made in your README documentation. We created an empty `README.md` file in the root directory of the repo. You will submit this to Gradescope in addition to other code files.
+* Other
+    * Admin penalties up to 20% for not following instructions
