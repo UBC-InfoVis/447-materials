@@ -1,30 +1,23 @@
 # Programming Assignment 2
 
-*Due on Mar 4 2022 at 6pm.*
+*Due on Mar 3 2023 at 6pm.*
 
-*Remember to submit all modified files to Gradescope before the due date*
+*Submit a zip file of, or the __p2__ project folder to Gradescope before the due date. Include all modified files. Failure to follow instructions will result in an administrative penalty of up to 20%*
 
 This programming assignment assumes that you have fulfilled all course prerequisites and followed along with the D3 tutorials.
 
 ### Template and Submission
 
-We will use **git** repositories for all programming assignments and project milestones. You should already be well acquainted with the process and all necessary git commands from the previous programming assignment.
+We will use **gradescope** for all programming assignments and project milestones. You should already be well acquainted with the process from previous courses, but ask course staff if you need a refresher.
 
-We created a git repository in your github student account ([https://github.students.cs.ubc.ca/](https://github.students.cs.ubc.ca/)) that contains a template that should help you get started. The dataset is included in the /data folder. You will need to modify the .html, .js, and .css files as described below. Don't add new files.
-
-You must work alone. You may use the git repo however you would like, but make sure to submit the following files to Gradescope before the deadline:
-* index.html
-* main.js
-* barChart.js
-* lexisChart.js
-* scatterplot.js
-* style.css
-* README.md
-* any other modified files
+This repo contains a basic template that should help you get started. You can download .zip of the repo: ([p2.zip](https://www.students.cs.ubc.ca/~cs-447/23Jan/p2.zip)).
+A dataset is included in the `/data` folder. You will need to modify the `.html`, `.js`, and `.css` files as described below. You may add helper files to organize your code. Please include these in your submission with all other files as required.
 
 We will also evaluate code readability and structure (add comments, indent code, use functions, ...).
 
 Cite any external resources and explain exactly what modifications you have made in your README documentation. We created an empty `README.md` file in the root directory of the repo.
+
+Submit the programming assignment by zipping ALL the above files, or selecting the whole `p2` folder and submitting it to Gradescope before the deadline. Work alone.
 
 ---
 

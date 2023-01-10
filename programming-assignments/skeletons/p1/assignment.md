@@ -10,7 +10,7 @@ This programming assignment assumes that you have fulfilled all course prerequis
 
 We will use **gradescope** for all programming assignments and project milestones. You should already be well acquainted with the process from previous courses, but ask course staff if you need a refresher.
 
-This repo contains a basic template that should help you get started. You can download .zip of the repo: ([https://www.students.cs.ubc.ca/~cs-447/23Jan/p1.zip](p1.zip)).
+This repo contains a basic template that should help you get started. You can download .zip of the repo: ([p1.zip](https://www.students.cs.ubc.ca/~cs-447/23Jan/p1.zip)).
 A dataset is included in the `/data` folder. You will need to modify the `.html`, `.js`, and `.css` files as described below. You may add helper files to organize your code. Please include these in your submission with all other files as required.
 
 We will also evaluate code readability and structure (add comments, indent code, use functions, ...).
