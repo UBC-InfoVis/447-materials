@@ -398,7 +398,7 @@ The final D3 code in the `showBarChart()` function:
 ```javascript
 function showBarChart(data) {
 	// Margin object with properties for the four directions
-	const margin = {top: 5, right: 5, bottom: 20, left: 50};
+	const margin = {top: 5, right: 20, bottom: 20, left: 50};
 
 	// Width and height as the inner dimensions of the chart area
 	const width = 500 - margin.left - margin.right,
