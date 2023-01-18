@@ -364,7 +364,7 @@ We provide instructions at a high level here, but more granular instructions in 
 9. **Draw the bars using the enter-update-exit pattern**
 	To test if this is working correctly, you can filter data using the buttons. If you have implemented the data-join correctly, the bars and axes will update accordingly to the filtered data.
 
-Our final implementation of this exercise can be downloaded from the `[complete](https://github.com/UBC-InfoVis/447-materials/tree/main/d3-examples/d3-interactive-bar-chart-activity/complete)` repo.
+Our final implementation of this exercise can be downloaded from the [complete](https://github.com/UBC-InfoVis/447-materials/tree/main/d3-examples/d3-interactive-bar-chart-activity/complete) repo.
 ---
 
 *Sources:*
