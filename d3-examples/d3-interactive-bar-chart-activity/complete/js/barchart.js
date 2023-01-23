@@ -138,8 +138,8 @@ class Barchart {
       .attr('x', (d) => vis.xScale(vis.xValue(d)))
       .attr('width', vis.xScale.bandwidth())
       .transition().duration(500).delay((d, i) => i * 5)
-      .attr('y', (d) => vis.height - vis.yScale(vis.yValue(d)))
-      .attr('height', (d) => vis.yScale(vis.yValue(d)))
+      .attr('height', (d) => vis.height - vis.yScale(vis.yValue(d)))
+      .attr('y', (d) => vis.yScale(vis.yValue(d)))
 
     bars.exit().remove();
 
