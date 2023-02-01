@@ -2,7 +2,7 @@
 
 *Out on Tue, Jan. 31, 2023. Due on Fri, Feb. 17, 2023, 6:00pm.*
 
-*Submit a zip file of, or the __p1__ project folder to Gradescope before the due date. Include all modified files. Failure to follow instructions will result in an administrative penalty of up to 20%*
+*Submit the entire __p1__ project as a zip file to Gradescope before the due date. Include all modified files. Failure to follow instructions will result in an administrative penalty of up to 20%*
 
 This programming assignment assumes that you have fulfilled all course prerequisites and followed along with the D3 tutorials.
 
@@ -17,7 +17,7 @@ We will also evaluate code readability and structure (add comments, indent code,
 
 Cite any external resources and explain exactly what modifications you have made in your README documentation. We created an empty `README.md` file in the root directory of the repo.
 
-Submit the programming assignment by zipping ALL the above files, or selecting the whole `p1` folder and submitting it to Gradescope before the deadline. Work alone.
+Submit the programming assignment by zipping ALL the above files and submitting it to Gradescope before the deadline. Work alone.
 
 ---
 

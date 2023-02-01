@@ -2,7 +2,7 @@
 
 *Out: Tue Jan. 17, 2023. Due: Fri Feb. 3, 2023, 6pm.*
 
-*Submit the entire __p0__ project (as a folder or as a zip file), to Gradescope before the due date. DO NOT upload any other files. Failure to follow instructions will result in an administrative overhead penalty of up to 20%*
+*Submit the entire __p0__ project as a zip file to Gradescope before the due date. DO NOT upload any other files. Failure to follow instructions will result in an administrative overhead penalty of up to 20%*
 
 This programming assignment assumes that you have fulfilled all course prerequisites and followed along with the D3 tutorials.
 
@@ -15,9 +15,7 @@ A dataset is included in the `/data` folder. You will need to modify the `.html`
 
 Don't add new files, don't leave out files, and don't change the names of existing files. Any changes will result in an admin overhead penalty of up to 20%.
 
-Submit the programming assignment by zipping ALL the above files, or selecting the whole `p0` folder and submitting it to Gradescope before the deadline. 
-
-Work alone.
+Submit the programming assignment by zipping ALL the above files and submitting it to Gradescope before the deadline. Work alone.
 
 ---
 
