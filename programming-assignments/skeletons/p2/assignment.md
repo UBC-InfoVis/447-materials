@@ -2,7 +2,7 @@
 
 *Out on Tue, Feb. 14, 2023. Due on Fri, Mar. 10, 2023, at 6pm.*
 
-*Submit a zip file of, or the __p2__ project folder to Gradescope before the due date. Include all modified files. Failure to follow instructions will result in an administrative penalty of up to 20%*
+*Submit the entire __p2__ project as a zip file to Gradescope before the due date. Include all modified files. Failure to follow instructions will result in an administrative penalty of up to 20%*
 
 This programming assignment assumes that you have fulfilled all course prerequisites and followed along with the D3 tutorials.
 

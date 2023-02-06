@@ -331,7 +331,7 @@ const stackedData = stack(data);
 console.log(stackedData)
 ```
 
-When we print the data, we can see the computed values: milk (0 to 10, 0-12, 0-11) and water (10-14, 12-18, 11-18).
+When we print the data, we can see the computed values: milk (0 to 10, 0-12, 0-6) and water (10-14, 12-18, 6-13).
 
 ![Stacked data](images/stacked_data.png?raw=true "Stacked data")
 
