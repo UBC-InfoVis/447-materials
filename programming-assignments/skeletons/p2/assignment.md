@@ -11,13 +11,17 @@ This programming assignment assumes that you have fulfilled all course prerequis
 We will use **gradescope** for all programming assignments and project milestones. You should already be well acquainted with the process from previous courses, but ask course staff if you need a refresher.
 
 This repo contains a basic template that should help you get started. You can download .zip of the repo: ([p2.zip](https://www.students.cs.ubc.ca/~cs-447/23Jan/p2.zip)).
-A dataset is included in the `/data` folder. You will need to modify the `.html`, `.js`, and `.css` files as described below. You may add helper files to organize your code. Please include these in your submission with all other files as required.
+A dataset is included in the `/data` folder. You will need to modify the `.html`, `.js`, and `.css` files as described below.
+
+Don't add new files, don't leave out files, and don't change the names of existing files. Any changes will result in an admin overhead penalty of up to 20%.
 
 We will also evaluate code readability and structure (add comments, indent code, use functions, ...).
 
 Cite any external resources and explain exactly what modifications you have made in your README documentation. We created an empty `README.md` file in the root directory of the repo.
 
-Submit the programming assignment by zipping ALL the above files, or selecting the whole `p2` folder and submitting it to Gradescope before the deadline. Work alone.
+Submit the programming assignment by zipping ALL the above files, or selecting the whole `p2` folder and submitting it to Gradescope before the deadline.
+
+Work alone.
 
 ---
 
