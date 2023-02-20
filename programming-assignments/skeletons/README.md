@@ -1,2 +1,2 @@
-# 436V-assignments
-Programming assignment skeletons for 436V taught at UBC.
+# 447-assignments
+Programming assignment skeletons for 447 taught at UBC.
