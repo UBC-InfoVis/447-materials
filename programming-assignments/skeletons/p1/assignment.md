@@ -57,7 +57,7 @@ We recommend that you break down the implementation into the following tasks. Pl
 	        .endAngle(Math.PI / 2);
 		```
 
-	* You need to create the radius scale that is used in the arc generator: The radius should be between **4** and **140px** for the least and most costly disasters, respectively. Use a **square root scale** and not a linear scale to create an accurate visual representation. You can read more about why it's a mistake to linearly map a data value to a circle radius in this [blog post](https://bl.ocks.org/guilhermesimoes/e6356aa90a16163a6f917f53600a2b4a).
+	* You need to create the radius scale that is used in the arc generator: The radius should be between **4** and **120px** for the least and most costly disasters, respectively. Use a **square root scale** and not a linear scale to create an accurate visual representation. You can read more about why it's a mistake to linearly map a data value to a circle radius in this [blog post](https://bl.ocks.org/guilhermesimoes/e6356aa90a16163a6f917f53600a2b4a).
 
 
 3. **Draw the semicircles**
@@ -94,7 +94,8 @@ We recommend that you break down the implementation into the following tasks. Pl
 
 5. **Add text annotations**
 
-	* *Required:* Add a text label with the `name` of the costliest disaster of each year. The labels should be positioned below each semicircle and centered (hint: `.attr('text-anchor', 'middle')`). Make sure that all labels are also part of your enter-update-exit workflow.
+	* *Required:* Add a text label with the `name` of the costliest disaster of each year. The labels should be positioned below each semicircle and centered (hint: `.attr('text-anchor', 'middle')`). Make sure that all labels are also part of your enter-update-exit workflow. If more than one disaster is the costliest disaster of that year, render both text annotations.
+	* *Required:* There must only be as many text objects rendered in the HMTL as there are costliest disasters. Do not append all of the disaster labels and change the opacity based on the costliest disaster.
 	* *Not required:* In our solution, we displayed the text label for Hurricane Harvey at the top and showed the estimated cost in billion dollars. We have also included the caption: *"Circles are sized proportionally to their cost in 2017 dollars."*. Those annotations are optional.
 
 6. **Add a legend that also serves as an interactive filter**

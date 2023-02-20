@@ -8,3 +8,9 @@ body {
   width: 800px;
   margin: 0 auto;
 }
+
+h1 {
+  font-family: 'Castoro', serif;
+  font-style: italic;
+  font-size: 2rem;
+}
