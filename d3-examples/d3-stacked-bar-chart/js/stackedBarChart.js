@@ -10,12 +10,17 @@ class StackedBarChart {
       parentElement: _config.parentElement,
       containerWidth: 400,
       containerHeight: 200,
-      margin: {top: 10, right: 10, bottom: 30, left: 30},
+      margin: {
+        top: 10,
+        right: 10,
+        bottom: 30,
+        left: 30
+      },
     }
     this.data = _data;
     this.initVis();
   }
-  
+
   /**
    * Initialize scales/axes and append static chart elements
    */
@@ -26,40 +31,40 @@ class StackedBarChart {
     vis.height = vis.config.containerHeight - vis.config.margin.top - vis.config.margin.bottom;
 
     vis.xScale = d3.scaleBand()
-        .range([0, vis.width])
-        .paddingInner(0.2)
-        .paddingOuter(0.2);
+      .range([0, vis.width])
+      .paddingInner(0.2)
+      .paddingOuter(0.2);
 
     vis.yScale = d3.scaleLinear()
-        .range([vis.height, 0]);
-    
+      .range([vis.height, 0]);
+
     // Initialize axes
     vis.xAxis = d3.axisBottom(vis.xScale);
     vis.yAxis = d3.axisLeft(vis.yScale).ticks(6);
 
     // Define size of SVG drawing area
-    vis.svg = d3.select(vis.config.parentElement)
-        .attr('width', vis.config.containerWidth)
-        .attr('height', vis.config.containerHeight);
+    vis.svg = d3.select(vis.config.parentElement).append('svg')
+      .attr('width', vis.config.containerWidth)
+      .attr('height', vis.config.containerHeight);
 
     // Append group element that will contain our actual chart
     vis.chart = vis.svg.append('g')
-        .attr('transform', `translate(${vis.config.margin.left},${vis.config.margin.top})`);
+      .attr('transform', `translate(${vis.config.margin.left},${vis.config.margin.top})`);
 
     // Append empty x-axis group and move it to the bottom of the chart
     vis.xAxisG = vis.chart.append('g')
-        .attr('class', 'axis x-axis')
-        .attr('transform', `translate(0,${vis.height})`);
-    
+      .attr('class', 'axis x-axis')
+      .attr('transform', `translate(0,${vis.height})`);
+
     // Append y-axis group
     vis.yAxisG = vis.chart.append('g')
-        .attr('class', 'axis y-axis');
+      .attr('class', 'axis y-axis');
 
     // Initialize stack generator and specify the categories or layers
     // that we want to show in the chart
     vis.stack = d3.stack()
-        .keys(['milk', 'water']);
-    
+      .keys(['milk', 'water']);
+
     vis.updateVis();
   }
 
@@ -69,8 +74,8 @@ class StackedBarChart {
   updateVis() {
     let vis = this;
 
-    vis.xScale.domain([2015,2016,2017]);
-    vis.yScale.domain([0,18]);
+    vis.xScale.domain([2015, 2016, 2017]);
+    vis.yScale.domain([0, 18]);
 
     // Call stack generator on the dataset
     vis.stackedData = vis.stack(vis.data);
@@ -87,16 +92,16 @@ class StackedBarChart {
     let vis = this;
 
     vis.chart.selectAll('category')
-        .data(vis.stackedData)
+      .data(vis.stackedData)
       .join('g')
-        .attr('class', d => `category cat-${d.key}`)
+      .attr('class', d => `category cat-${d.key}`)
       .selectAll('rect')
-        .data(d => d)
+      .data(d => d)
       .join('rect')
-        .attr('x', d => vis.xScale(d.data.year))
-        .attr('y', d => vis.yScale(d[1]))
-        .attr('height', d => vis.yScale(d[0]) - vis.yScale(d[1]))
-        .attr('width', vis.xScale.bandwidth());
+      .attr('x', d => vis.xScale(d.data.year))
+      .attr('y', d => vis.yScale(d[1]))
+      .attr('height', d => vis.yScale(d[0]) - vis.yScale(d[1]))
+      .attr('width', vis.xScale.bandwidth());
 
     // Update the axes
     vis.xAxisG.call(vis.xAxis);

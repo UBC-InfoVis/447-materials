@@ -12,13 +12,18 @@ class Barchart {
       colorScale: _config.colorScale,
       containerWidth: _config.containerWidth || 260,
       containerHeight: _config.containerHeight || 300,
-      margin: _config.margin || {top: 25, right: 20, bottom: 20, left: 40}
+      margin: _config.margin || {
+        top: 25,
+        right: 20,
+        bottom: 20,
+        left: 40
+      }
     }
     this.dispatcher = _dispatcher;
     this.data = _data;
     this.initVis();
   }
-  
+
   /**
    * Initialize scales/axes and append static elements, such as axis titles
    */
@@ -30,53 +35,53 @@ class Barchart {
     vis.height = vis.config.containerHeight - vis.config.margin.top - vis.config.margin.bottom;
 
     // Initialize scales and axes
-    
+
     // Initialize scales
     vis.colorScale = d3.scaleOrdinal()
-        .range(['#d3eecd', '#7bc77e', '#2a8d46']) // light green to dark green
-        .domain(['Easy','Intermediate','Difficult']);
-    
+      .range(['#d3eecd', '#7bc77e', '#2a8d46']) // light green to dark green
+      .domain(['Easy', 'Intermediate', 'Difficult']);
+
     // Important: we flip array elements in the y output range to position the rectangles correctly
     vis.yScale = d3.scaleLinear()
-        .range([vis.height, 0]) 
+      .range([vis.height, 0])
 
     vis.xScale = d3.scaleBand()
-        .range([0, vis.width])
-        .paddingInner(0.2);
+      .range([0, vis.width])
+      .paddingInner(0.2);
 
     vis.xAxis = d3.axisBottom(vis.xScale)
-        .ticks(['Easy', 'Intermediate', 'Difficult'])
-        .tickSizeOuter(0);
+      .ticks(['Easy', 'Intermediate', 'Difficult'])
+      .tickSizeOuter(0);
 
     vis.yAxis = d3.axisLeft(vis.yScale)
-        .ticks(6)
-        .tickSizeOuter(0)
+      .ticks(6)
+      .tickSizeOuter(0)
 
     // Define size of SVG drawing area
-    vis.svg = d3.select(vis.config.parentElement)
-        .attr('width', vis.config.containerWidth)
-        .attr('height', vis.config.containerHeight);
+    vis.svg = d3.select(vis.config.parentElement).append('svg')
+      .attr('width', vis.config.containerWidth)
+      .attr('height', vis.config.containerHeight);
 
     // SVG Group containing the actual chart; D3 margin convention
     vis.chart = vis.svg.append('g')
-        .attr('transform', `translate(${vis.config.margin.left},${vis.config.margin.top})`);
+      .attr('transform', `translate(${vis.config.margin.left},${vis.config.margin.top})`);
 
     // Append empty x-axis group and move it to the bottom of the chart
     vis.xAxisG = vis.chart.append('g')
-        .attr('class', 'axis x-axis')
-        .attr('transform', `translate(0,${vis.height})`);
-    
-    // Append y-axis group 
+      .attr('class', 'axis x-axis')
+      .attr('transform', `translate(0,${vis.height})`);
+
+    // Append y-axis group
     vis.yAxisG = vis.chart.append('g')
-        .attr('class', 'axis y-axis');
+      .attr('class', 'axis y-axis');
 
     // Append axis title
     vis.svg.append('text')
-        .attr('class', 'axis-title')
-        .attr('x', 0)
-        .attr('y', 0)
-        .attr('dy', '.71em')
-        .text('Trails');
+      .attr('class', 'axis-title')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('dy', '.71em')
+      .text('Trails');
   }
 
   /**
@@ -88,10 +93,13 @@ class Barchart {
     // Prepare data: count number of trails in each difficulty category
     // i.e. [{ key: 'easy', count: 10 }, {key: 'intermediate', ...
     const aggregatedDataMap = d3.rollups(vis.data, v => v.length, d => d.difficulty);
-    vis.aggregatedData = Array.from(aggregatedDataMap, ([key, count]) => ({ key, count }));
+    vis.aggregatedData = Array.from(aggregatedDataMap, ([key, count]) => ({
+      key,
+      count
+    }));
 
     const orderedKeys = ['Easy', 'Intermediate', 'Difficult'];
-    vis.aggregatedData = vis.aggregatedData.sort((a,b) => {
+    vis.aggregatedData = vis.aggregatedData.sort((a, b) => {
       return orderedKeys.indexOf(a.key) - orderedKeys.indexOf(b.key);
     });
 
@@ -115,25 +123,25 @@ class Barchart {
 
     // Add rectangles
     const bars = vis.chart.selectAll('.bar')
-        .data(vis.aggregatedData, vis.xValue)
+      .data(vis.aggregatedData, vis.xValue)
       .join('rect')
-        .attr('class', 'bar')
-        .attr('x', d => vis.xScale(vis.xValue(d)))
-        .attr('width', vis.xScale.bandwidth())
-        .attr('height', d => vis.height - vis.yScale(vis.yValue(d)))
-        .attr('y', d => vis.yScale(vis.yValue(d)))
-        .attr('fill', d => vis.colorScale(vis.colorValue(d)))
-        .on('click', function(event, d) {
-          // Check if current category is active and toggle class
-          const isActive = d3.select(this).classed('active');
-          d3.select(this).classed('active', !isActive);
+      .attr('class', 'bar')
+      .attr('x', d => vis.xScale(vis.xValue(d)))
+      .attr('width', vis.xScale.bandwidth())
+      .attr('height', d => vis.height - vis.yScale(vis.yValue(d)))
+      .attr('y', d => vis.yScale(vis.yValue(d)))
+      .attr('fill', d => vis.colorScale(vis.colorValue(d)))
+      .on('click', function (event, d) {
+        // Check if current category is active and toggle class
+        const isActive = d3.select(this).classed('active');
+        d3.select(this).classed('active', !isActive);
 
-          // Get the names of all active/filtered categories
-          const selectedCategories = vis.chart.selectAll('.bar.active').data().map(k => k.key);
-          
-          // Trigger filter event and pass array with the selected category names
-          vis.dispatcher.call('filterCategories', event, selectedCategories);
-        });
+        // Get the names of all active/filtered categories
+        const selectedCategories = vis.chart.selectAll('.bar.active').data().map(k => k.key);
+
+        // Trigger filter event and pass array with the selected category names
+        vis.dispatcher.call('filterCategories', event, selectedCategories);
+      });
 
     // Update axes
     vis.xAxisG.call(vis.xAxis);

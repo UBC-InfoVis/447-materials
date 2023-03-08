@@ -9,10 +9,12 @@ d3.csv('data/population.csv')
     });
 
     // Sort data by population
-    data.sort((a,b) => b.population - a.population);
-    
+    data.sort((a, b) => b.population - a.population);
+
     // Initialize chart and then show it
-    barchart = new Barchart({ parentElement: '#chart'}, data);
+    barchart = new Barchart({
+      parentElement: '#vis'
+    }, data);
     barchart.updateVis();
   })
   .catch(error => console.error(error));

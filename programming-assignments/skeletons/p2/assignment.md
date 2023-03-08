@@ -123,13 +123,17 @@ We recommend that you break down the implementation into the following tasks. Pl
 
 		- When users click on a point in the scatter plot, the fill colour changes and the politician is highlighted in the lexis chart.
 		- When users click on multiple points, they should all be highlighted.
-		- Clicking outside any point (but still on the scatter plot) resets the selection entirely.
 		- Scatter plot and lexis chart share the same selection: if a new arrow is selected in the lexis chart, the corresponding point in the scatterplot should be selected
 		- Similarly, if you click on a selected arrow in the lexis chart (to deselect it), the corresponding point in the scatterplot should be deselected
+		- Clicking outside any point (but still on the scatter plot) resets the selection entirely. The image below shows the area where clearing should reset the selection.
 
-   4. ***Lexis chart → scatter plot***
+        ![Scatterplot-clear-area](p2-scatterplot-clear.png?raw=true "Scatterplot-clear-area")
+
+   1. ***Lexis chart → scatter plot***
         - When clicking on an arrow in the lexis chart, the corresponding point should also highlight in the scatter plot. Because we are filtering where the GDP is known, it is possible that clicking on some arrows will not have corresponding dots in the scatter plot.
         - Clicking on the lexis chart does not reset any selection
+
+
 
 7. Add axis/chart **titles**.
 
@@ -185,11 +189,11 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Hover: Mouseover an included point (included by both dropdown and gender filter) darkens it and adds an outline
     * Hover: Mouseover a selected point adds an outline
     * Hover: Mouseover on an unincluded point (one that is greyed out via filtering) does not do anything
-    * Hover: Mouseover any included points have tooltips that show name, country, start and end year, age when they took office, total duration, and GDP per capita (if available, otherwise show nothing or describe it as missing rather than leaving it as null or 0)
+    * Hover: Mouseover any included points have tooltips that show name, country, start and end year, age when they took office, total duration, and GDP per capita (if available)
     * Selection: clicking on an unselected point highlights it
     * Selection: clicking on a selected point unhighlights it
     * Selection: clicking on an unincluded point does nothing
-    * Selection: clicking anywhere on the scatter plot clears the existing selected points
+    * Selection: clicking anywhere on the background of the scatter plot (but not the axes or title) clears the existing selected points
 * Connect Views
   * Lexis chart → scatter plot
     * Selection: selecting an arrow in the lexis chart highlights the corresponding dot in the scatter plot if it exists

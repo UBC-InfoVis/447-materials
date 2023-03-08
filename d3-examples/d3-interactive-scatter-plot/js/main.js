@@ -9,8 +9,10 @@ d3.csv('data/vancouver_trails.csv')
       d.time = +d.time;
       d.distance = +d.distance;
     });
-    
-    scatterplot = new Scatterplot({ parentElement: '#scatterplot'}, data);
+
+    scatterplot = new Scatterplot({
+      parentElement: '#vis'
+    }, data);
     scatterplot.updateVis();
   })
   .catch(error => console.error(error));
@@ -19,13 +21,13 @@ d3.csv('data/vancouver_trails.csv')
 /**
  * Event listener: use color legend as filter
  */
-d3.selectAll('.legend-btn').on('click', function() {
+d3.selectAll('.legend-btn').on('click', function () {
   // Toggle 'inactive' class
   d3.select(this).classed('inactive', !d3.select(this).classed('inactive'));
-  
+
   // Check which categories are active
   let selectedDifficulty = [];
-  d3.selectAll('.legend-btn:not(.inactive)').each(function() {
+  d3.selectAll('.legend-btn:not(.inactive)').each(function () {
     selectedDifficulty.push(d3.select(this).attr('data-difficulty'));
   });
 

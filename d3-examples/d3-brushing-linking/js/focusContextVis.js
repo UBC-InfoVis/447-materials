@@ -8,16 +8,26 @@ class FocusContextVis {
   constructor(_config, _data) {
     this.config = {
       parentElement: _config.parentElement,
-      width:  800,
+      width: 800,
       height: 240,
       contextHeight: 50,
-      margin: {top: 10, right: 10, bottom: 100, left: 45},
-      contextMargin: {top: 280, right: 10, bottom: 20, left: 45}
+      margin: {
+        top: 10,
+        right: 10,
+        bottom: 100,
+        left: 45
+      },
+      contextMargin: {
+        top: 280,
+        right: 10,
+        bottom: 20,
+        left: 45
+      }
     }
     this.data = _data;
     this.initVis();
   }
-  
+
   /**
    * Initialize scales/axes and append static chart elements
    */
@@ -28,18 +38,18 @@ class FocusContextVis {
     const containerHeight = vis.config.height + vis.config.margin.top + vis.config.margin.bottom;
 
     vis.xScaleFocus = d3.scaleTime()
-        .range([0, vis.config.width]);
+      .range([0, vis.config.width]);
 
     vis.xScaleContext = d3.scaleTime()
-        .range([0, vis.config.width]);
+      .range([0, vis.config.width]);
 
     vis.yScaleFocus = d3.scaleLinear()
-        .range([vis.config.height, 0])
-        .nice();
+      .range([vis.config.height, 0])
+      .nice();
 
     vis.yScaleContext = d3.scaleLinear()
-        .range([vis.config.contextHeight, 0])
-        .nice();
+      .range([vis.config.contextHeight, 0])
+      .nice();
 
     // Initialize axes
     vis.xAxisFocus = d3.axisBottom(vis.xScaleFocus).tickSizeOuter(0);
@@ -47,71 +57,78 @@ class FocusContextVis {
     vis.yAxisFocus = d3.axisLeft(vis.yScaleFocus);
 
     // Define size of SVG drawing area
-    vis.svg = d3.select(vis.config.parentElement)
-        .attr('width', containerWidth)
-        .attr('height', containerHeight);
+    vis.svg = d3.select(vis.config.parentElement).append('svg')
+      .attr('width', containerWidth)
+      .attr('height', containerHeight);
 
     // Append focus group with x- and y-axes
     vis.focus = vis.svg.append('g')
-        .attr('transform', `translate(${vis.config.margin.left},${vis.config.margin.top})`);
+      .attr('transform', `translate(${vis.config.margin.left},${vis.config.margin.top})`);
 
     vis.focus.append('defs').append('clipPath')
-        .attr('id', 'clip')
+      .attr('id', 'clip')
       .append('rect')
-        .attr('width', vis.config.width)
-        .attr('height', vis.config.height);
-    
+      .attr('width', vis.config.width)
+      .attr('height', vis.config.height);
+
     vis.focusLinePath = vis.focus.append('path')
-        .attr('class', 'chart-line');
+      .attr('class', 'chart-line');
 
     vis.xAxisFocusG = vis.focus.append('g')
-        .attr('class', 'axis x-axis')
-        .attr('transform', `translate(0,${vis.config.height})`);
+      .attr('class', 'axis x-axis')
+      .attr('transform', `translate(0,${vis.config.height})`);
 
     vis.yAxisFocusG = vis.focus.append('g')
-        .attr('class', 'axis y-axis');
+      .attr('class', 'axis y-axis');
 
     vis.tooltipTrackingArea = vis.focus.append('rect')
-        .attr('width', vis.config.width)
-        .attr('height', vis.config.height)
-        .attr('fill', 'none')
-        .attr('pointer-events', 'all');
+      .attr('width', vis.config.width)
+      .attr('height', vis.config.height)
+      .attr('fill', 'none')
+      .attr('pointer-events', 'all');
 
     // Empty tooltip group (hidden by default)
     vis.tooltip = vis.focus.append('g')
-        .attr('class', 'tooltip')
-        .style('display', 'none');
+      .attr('class', 'tooltip')
+      .style('display', 'none');
 
     vis.tooltip.append('circle')
-        .attr('r', 4);
+      .attr('r', 4);
 
     vis.tooltip.append('text');
 
 
     // Append context group with x- and y-axes
     vis.context = vis.svg.append('g')
-        .attr('transform', `translate(${vis.config.contextMargin.left},${vis.config.contextMargin.top})`);
+      .attr('transform', `translate(${vis.config.contextMargin.left},${vis.config.contextMargin.top})`);
 
     vis.contextAreaPath = vis.context.append('path')
-        .attr('class', 'chart-area');
+      .attr('class', 'chart-area');
 
     vis.xAxisContextG = vis.context.append('g')
-        .attr('class', 'axis x-axis')
-        .attr('transform', `translate(0,${vis.config.contextHeight})`);
+      .attr('class', 'axis x-axis')
+      .attr('transform', `translate(0,${vis.config.contextHeight})`);
 
     vis.brushG = vis.context.append('g')
-        .attr('class', 'brush x-brush');
+      .attr('class', 'brush x-brush');
 
 
     // Initialize brush component
     vis.brush = d3.brushX()
-        .extent([[0, 0], [vis.config.width, vis.config.contextHeight]])
-        .on('brush', function({selection}) {
-          if (selection) vis.brushed(selection);
-        })
-        .on('end', function({selection}) {
-          if (!selection) vis.brushed(null);
-        });
+      .extent([
+        [0, 0],
+        [vis.config.width, vis.config.contextHeight]
+      ])
+      .on('brush', function ({
+        selection
+      }) {
+        if (selection) vis.brushed(selection);
+      })
+      .on('end', function ({
+        selection
+      }) {
+        if (!selection) vis.brushed(null);
+      });
   }
 
   /**
@@ -119,19 +136,19 @@ class FocusContextVis {
    */
   updateVis() {
     let vis = this;
-    
+
     vis.xValue = d => d.date;
     vis.yValue = d => d.close;
 
     // Initialize line and area generators
     vis.line = d3.line()
-        .x(d => vis.xScaleFocus(vis.xValue(d)))
-        .y(d => vis.yScaleFocus(vis.yValue(d)));
+      .x(d => vis.xScaleFocus(vis.xValue(d)))
+      .y(d => vis.yScaleFocus(vis.yValue(d)));
 
     vis.area = d3.area()
-        .x(d => vis.xScaleContext(vis.xValue(d)))
-        .y1(d => vis.yScaleContext(vis.yValue(d)))
-        .y0(vis.config.contextHeight);
+      .x(d => vis.xScaleContext(vis.xValue(d)))
+      .y1(d => vis.yScaleContext(vis.yValue(d)))
+      .y0(vis.config.contextHeight);
 
     // Set the scale input domains
     vis.xScaleFocus.domain(d3.extent(vis.data, vis.xValue));
@@ -151,40 +168,40 @@ class FocusContextVis {
     let vis = this;
 
     vis.focusLinePath
-        .datum(vis.data)
-        .attr('d', vis.line);
+      .datum(vis.data)
+      .attr('d', vis.line);
 
     vis.contextAreaPath
-        .datum(vis.data)
-        .attr('d', vis.area);
+      .datum(vis.data)
+      .attr('d', vis.area);
 
     vis.tooltipTrackingArea
-        .on('mouseenter', () => {
-          vis.tooltip.style('display', 'block');
-        })
-        .on('mouseleave', () => {
-          vis.tooltip.style('display', 'none');
-        })
-        .on('mousemove', function(event) {
-          // Get date that corresponds to current mouse x-coordinate
-          const xPos = d3.pointer(event, this)[0]; // First array element is x, second is y
-          const date = vis.xScaleFocus.invert(xPos);
+      .on('mouseenter', () => {
+        vis.tooltip.style('display', 'block');
+      })
+      .on('mouseleave', () => {
+        vis.tooltip.style('display', 'none');
+      })
+      .on('mousemove', function (event) {
+        // Get date that corresponds to current mouse x-coordinate
+        const xPos = d3.pointer(event, this)[0]; // First array element is x, second is y
+        const date = vis.xScaleFocus.invert(xPos);
 
-          // Find nearest data point
-          const index = vis.bisectDate(vis.data, date, 1);
-          const a = vis.data[index - 1];
-          const b = vis.data[index];
-          const d = b && (date - a.date > b.date - date) ? b : a; 
+        // Find nearest data point
+        const index = vis.bisectDate(vis.data, date, 1);
+        const a = vis.data[index - 1];
+        const b = vis.data[index];
+        const d = b && (date - a.date > b.date - date) ? b : a;
 
-          // Update tooltip
-          vis.tooltip.select('circle')
-              .attr('transform', `translate(${vis.xScaleFocus(d.date)},${vis.yScaleFocus(d.close)})`);
-          
-          vis.tooltip.select('text')
-              .attr('transform', `translate(${vis.xScaleFocus(d.date)},${(vis.yScaleFocus(d.close) - 15)})`)
-              .text(Math.round(d.close));
-        });
-    
+        // Update tooltip
+        vis.tooltip.select('circle')
+          .attr('transform', `translate(${vis.xScaleFocus(d.date)},${vis.yScaleFocus(d.close)})`);
+
+        vis.tooltip.select('text')
+          .attr('transform', `translate(${vis.xScaleFocus(d.date)},${(vis.yScaleFocus(d.close) - 15)})`)
+          .text(Math.round(d.close));
+      });
+
     // Update the axes
     vis.xAxisFocusG.call(vis.xAxisFocus);
     vis.yAxisFocusG.call(vis.yAxisFocus);
@@ -193,8 +210,8 @@ class FocusContextVis {
     // Update the brush and define a default position
     const defaultBrushSelection = [vis.xScaleFocus(new Date('2019-01-01')), vis.xScaleContext.range()[1]];
     vis.brushG
-        .call(vis.brush)
-        .call(vis.brush.move, defaultBrushSelection);
+      .call(vis.brush)
+      .call(vis.brush.move, defaultBrushSelection);
   }
 
   /**

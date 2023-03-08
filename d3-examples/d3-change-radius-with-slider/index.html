@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Use input slider to change radius</title>
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- HTML form -->
     <div>
@@ -12,10 +14,11 @@
         <input type="range" min="1" value="60" max="80" id="radius-slider">
     </div>
 
-    <!-- Empty SVG drawing area -->
-    <svg id="chart" width="200" height="200"></svg>
-    
+    <!-- container to append our chart to -->
+    <div id="vis"></div>
+
     <script src="js/d3.v6.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

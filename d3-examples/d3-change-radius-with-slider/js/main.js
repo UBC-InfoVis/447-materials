@@ -1,12 +1,14 @@
-const svg = d3.select('svg');
+const svg = d3.select('#vis').append('svg')
+  .attr('width', 200)
+  .attr('height', 200);
 
 // Show circle with initial radius of 60px
 const circle = svg.append('circle')
-    .attr('cx', 100)
-    .attr('cy', 100) 
-    .attr('fill', 'none')   
-    .attr('stroke', 'blue') 
-    .attr('r', 60);
+  .attr('cx', 100)
+  .attr('cy', 100)
+  .attr('fill', 'none')
+  .attr('stroke', 'blue')
+  .attr('r', 60);
 
 function update(radius) {
   circle.attr('r', radius);
@@ -15,7 +17,7 @@ function update(radius) {
 
 
 // Event slider for input slider
-d3.select('#radius-slider').on('input', function() {
+d3.select('#radius-slider').on('input', function () {
   // Update visualization
   update(parseInt(this.value));
 

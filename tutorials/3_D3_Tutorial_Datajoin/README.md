@@ -302,17 +302,22 @@ With our data in a hierarchical format (i.e. a matrix, an array of arrays), we c
 ```javascript
 // Generate 1 row for each fruit color
 let group = svg.selectAll('.row')
-				.data(result)
-				.append('g')
-				.attr('class', 'row');
+			.data(result)
+			.enter()
+			.append('g')
+			.attr('class', 'row');
+
+// Merge + exit code for rows
 
 // Generate 1 circle for each fruit
 let fruits = group.selectAll('.fruit')
-				.data(d => d[1], d => d.type) // Get the array of objects and use the type as the key function
-				.append('circle')
-				.attr('class', 'fruit')
-				// Other code to generate rows based off of a categorical y-scale
+			.data(d => d[1], d => d.type) // Get the array of objects and use the type as the key function
+			.enter()
+			.append('circle')
+			.attr('class', 'fruit')
+			// Other code to generate rows based off of a categorical y-scale
 
+// Merge + exit code for fruits
 ```
 The resulting selection will have a hierarchical structure that looks like this:
 ![Fruit selection example](images/fruit-nest.png?raw=true "Fruit selection example")
@@ -363,7 +368,7 @@ We provide instructions at a high level here, but more granular instructions in 
 
 9. **Draw the bars using the enter-update-exit pattern**
 	To test if this is working correctly, you can filter data using the buttons. If you have implemented the data-join correctly, the bars and axes will update accordingly to the filtered data.
-	
+
 Our final implementation of this exercise can be downloaded from the [complete](https://github.com/UBC-InfoVis/447-materials/tree/main/d3-examples/d3-interactive-bar-chart-activity/complete) repo.
 
 ---
