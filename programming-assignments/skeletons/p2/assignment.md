@@ -108,14 +108,14 @@ We recommend that you break down the implementation into the following tasks. Pl
 
 		- Use the bar chart as an interactive filter for the lexis chart. For example, when users click on the `female` option, only female politicians are shown in the lexis chart. Another click on an active option resets the filter.
 		- If arrows are currently highlighted, arrows are only deselected if the bar chart filters them out. For example, if Trudeau is selected in the lexis chart, and the `male` bar is selected, the arrow representing Trudeau is NOT deselected.
-         - Selection: If a gender filter is active and deactivated when arrows are selected their selection should be maintained
+         - Selection: If a gender filter is active and arrows are selected and the gender filter is deactivated, the selected arrows should be maintained
 
 	2. ***Bar chart → scatter plot***
 
 		- Points in the scatter plot should not be hidden when a gender is selected. Instead, you need to adjust the *fill opacity*. For instance, set the opacity to `0.7` for active and `0.15` for inactive points.
         - If points in the scatter plot are highlighted, selecting a gender in the bar chart clears (unselects) highlighted points that are filtered out. (See bullet 2 of bar chart -> lexis chart)
         - Remove interaction of filtered out points. Hovering over filtered out points no longer darkens or adds an outline, and you can no longer select them to be highlighted. Tooltips should only work on active points in the scatter plot.
-         - Selection: If a gender filter is active and deactivated when arrows are selected their selection should be maintained
+         - Selection: If a gender filter is active and points are selected and the gender filter is deactivated, the selected points should be maintained
 
 		 ![Active-Inactive](active_inactive.png?raw=true "Active-Inactive")
 
