@@ -85,13 +85,11 @@ class StackedBarChart {
 
   /**
    * This function contains the D3 code for binding data to visual elements
-   * Important: the chart is not interactive yet and renderVis() is intended
-   * to be called only once; otherwise new paths would be added on top
    */
   renderVis() {
     let vis = this;
 
-    vis.chart.selectAll('category')
+    vis.chart.selectAll('.category')
       .data(vis.stackedData)
       .join('g')
       .attr('class', d => `category cat-${d.key}`)
