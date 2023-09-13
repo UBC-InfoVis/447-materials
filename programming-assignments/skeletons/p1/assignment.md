@@ -1,6 +1,6 @@
 # Programming Assignment 1
 
-*Out on Tue, Jan. 31, 2023. Due on Fri, Feb. 17, 2023, 6:00pm.*
+*Out on Thu Sep 28, 2023. Due on Wed Oct 18 2023 6:00pm.*
 
 *Submit the entire __p1__ project as a zip file to Gradescope before the due date. Include all modified files. Failure to follow instructions will result in an administrative penalty of up to 20%*
 

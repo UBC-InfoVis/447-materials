@@ -1,6 +1,6 @@
 # Programming Assignment 0
 
-*Out: Tue Jan. 17, 2023. Due: Fri Feb. 3, 2023, 6pm.*
+*Out: Thu Sep 14 2023. Due: Wed Sep 27 2023, 6pm.*
 
 *Submit the entire __p0__ project as a zip file to Gradescope before the due date. DO NOT upload any other files. Failure to follow instructions will result in an administrative overhead penalty of up to 20%*
 
@@ -48,7 +48,7 @@ The final result of the *P0* assignment should look similar to the image below:
     * Hint: You can use d3.rollups to group data points and compute summary statistics (Example: d3.rollups(athletes, v => d3.sum(v, d => d.earnings), d => d.sport) computes the total earnings in each sports discipline based on a given athletes dataset).
 *  Labels
     * Include a chart title of "Trial/Accuracy Scatterplot" above the chart
-    * Include a horizontal axis title of "Accuracy" below the x-axis.    
+    * Include a horizontal axis title of "Accuracy" below the x-axis.
     * Include an annotation on the upper right that says “Mean Accuracy Per Trial”.
 *  Robustness
     * The visualization should work for different datasets in addition to the single test dataset that we provide, including but not limited to varying numbers of trials and varying trial average accuracies.
