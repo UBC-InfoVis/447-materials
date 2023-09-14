@@ -15,7 +15,7 @@ A dataset is included in the `/data` folder. You will need to modify the `.html`
 
 Don't add new files, don't leave out files, and don't change the names of existing files. Any changes will result in an admin overhead penalty of up to 20%.
 
-Submit the programming assignment by zipping ALL the above files and submitting it to Gradescope before the deadline. Work alone.
+Submit the programming assignment by zipping **the whole p0 folder** and submitting it to Gradescope before the deadline. Work alone.
 
 ---
 
