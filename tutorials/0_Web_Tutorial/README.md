@@ -525,8 +525,6 @@ We recommend two alternative command line options to start a server within your 
 
 In both cases, you can view the results in a web browser using `http://localhost:[PORT-NUMBER]`.
 
-Alternatively, you can use an **IDE**, such as [Webstorm](https://www.jetbrains.com/webstorm/) to view your D3 project on a local web server (i.e., in Webstorm → right-click on `myProjectIndex.html` → `run`).
-
 In [VSCode](https://code.visualstudio.com/), you can download the [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to spin up a server. Install the extension, click the `Go Live` button in the status bar at the bottom to start the server. Right-click → `myProjectIndex.html` → `Open with Live Server`.
 
 ### Web developer tools
