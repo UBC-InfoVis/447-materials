@@ -509,7 +509,7 @@ expensiveProducts // Returns: [{ name: "laptop", price: 1600 }, { name: "phone",
 
 ### Code editor
 
-You can use any code editor that you are comfortable with. Some developers prefer basic editors, such as [Sublime Text](https://www.sublimetext.com/) or [Atom](https://atom.io/), while others prefer full IDEs, such as [Webstorm](https://www.jetbrains.com/community/education/#students) (free student license available). Especially for the team project you should take an IDE into consideration.
+You can use any code editor that you are comfortable with. Some developers prefer basic editors, such as [Sublime Text](https://www.sublimetext.com/) or [Atom](https://atom.io/), while others prefer full IDEs, such as [VS Code](https://code.visualstudio.com/). Especially for the team project you should take an IDE into consideration.
 
 You may also want to try online interactive notebooks (such as [Observable](http://observablehq.com/)) that become increasingly popular to experiment with smaller D3 examples. However, they are not suitable for assignments because you need to use our given templates and submit the source code through git.
 
