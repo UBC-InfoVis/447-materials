@@ -151,7 +151,6 @@ let circle = svg.selectAll("circle")
 circle = svg.selectAll("circle")
 	.data([10, 15], d => d)
 
-// enter, update, exit
 ```
 
 In the above example, the key function allows us to map the data value directly instead of the default by-index behavior:
@@ -254,7 +253,7 @@ class MyChart {
 ## 4. <a name="nested">Enter, Update, Exit with Nested Elements</a>
 As you might have noticed, a useful tip to re-arranging svg elements is wrapping them in `<g>` group tags. This helps better organize the structure of the elements in our chart, and allows us to group and move elements together. When working with nested elements inside groups, we need to apply the enter-update pattern to nested elements.
 
-Nested and hierarchical elements often follow hierarchical data, like matrices. In many cases, we have to *transform* our flat data into a hierarchical form. D3 has built in functions for this, such as `[d3.rollup()](https://github.com/d3/d3-array/blob/main/README.md#rollup)`, or `[d3.groups()](https://github.com/d3/d3-array/blob/main/README.md#group)`.
+Nested and hierarchical elements often follow hierarchical data, like matrices. In many cases, we have to *transform* our flat data into a hierarchical form. D3 has built in functions for this, such as [d3.rollup()](https://github.com/d3/d3-array/blob/main/README.md#rollup), or [d3.groups()](https://github.com/d3/d3-array/blob/main/README.md#group).
 
 Let's say you have a table of fruits:
 ```javascript
