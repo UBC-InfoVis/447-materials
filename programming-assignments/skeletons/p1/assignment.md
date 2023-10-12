@@ -136,7 +136,7 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Each mark must have the class name "mark"
     * Must be semicircles
     * Must be clipped if at the beginning or end of the year
-    * Semicircle radius must be between 4 and 140 pixels
+    * Semicircle radius must be between 4 and 120 pixels
     * Semicircle radius must use a square root scale
     * Fill opacity must be 0.60
     * Stroke colour must be #333
