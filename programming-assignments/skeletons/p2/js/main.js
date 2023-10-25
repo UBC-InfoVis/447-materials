@@ -2,7 +2,7 @@
  * Load data from CSV file asynchronously and render charts
  */
 d3.csv('data/leaderlist.csv').then(data => {
-  
+
   // Convert columns to numerical values
   data.forEach(d => {
     Object.keys(d).forEach(attr => {
@@ -23,4 +23,5 @@ d3.csv('data/leaderlist.csv').then(data => {
  * - initialize views
  * - filter data
  * - listen to events and update views
+ * - listen to select box changes
  */

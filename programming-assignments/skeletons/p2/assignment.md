@@ -1,6 +1,6 @@
 # Programming Assignment 2
 
-*Out on Thu Oct 19 2023. Due on Wed Nov 8 2023 at 6pm.*
+*Out on Thu Oct 26 2023. Due on Wed Nov 8 2023 at 6pm.*
 
 *Submit the entire __p2__ project as a zip file to Gradescope before the due date. Include all modified files. Failure to follow instructions will result in an administrative penalty of up to 20%*
 
@@ -35,7 +35,7 @@ The goal of this assignment is to implement a D3 visualization with three linked
 
 The final result should look similar to the image below but you can make some style changes and arrange the views differently.
 
-**We have a recorded a [video that shows the required interactions](https://github.com/UBC-InfoVis/436V-materials/blob/23Jan/programming-assignments/skeletons/p2/p2-demo.mp4).**
+**We have a recorded a [video that shows the required interactions](https://github.com/UBC-InfoVis/436V-materials/blob/23Sep/programming-assignments/skeletons/p2/p2-demo.mp4).**
 
 ![Result](result.png?raw=true "Result")
 
@@ -63,28 +63,30 @@ We recommend that you break down the implementation into the following tasks. Pl
 
 3. **Lexis chart**
 
-	* `age` is shown on the y-axis and `year` on the x-axis. You can set the input domains of the two linear linear scales to be static, so that the axes remain constant although filters or selections may change (e.g., age: [25,95] and year: [1950,2021]). There will be arrows outside of these bounds, and they should be masked with a chart-mask, similar to P1.
+	* `age` is shown on the y-axis and `year` on the x-axis. You can set the input domains of the two linear scales to be static, so that the axes remain constant although filters or selections may change (e.g., age: [25,95] and year: [1950,2021]).
+	* There will be arrows outside of these bounds, and they will be masked with a chart-mask, similar to P1. To guarantee they are correctly masked, add all elements to vis.chart.
 	* Include a label for `Age` for the y-axis in the top-left
 	* The lexis chart is similar to a scatter plot but instead of point marks, you need to draw lines/arrows. The coordinates for the lines are: x1=`start_year`, x2=`end_year`, y1=`start_age`, and y2=`end_age`.
     * When arrows are selected, they should change their styles to be highlighted, and the corresponding label should appear
 	* Multiple arrows may be selected
-	* The D3 code for creating arrowheads (SVG markers) is included in `lexisChart.js`. The SVG markers are initialized with an id (e.g., `#arrow-head`) and can then be applied to SVG lines using D3 (i.e., `.attr('marker-end', 'url(#arrow-head)')`) or CSS (i.e., `marker-end: url(#arrow-head)`). To learn more about how the marker ends work, see [this short explainer](https://observablehq.com/@stvkas/interacting-with-marker-ends) made by Steve Kasica. You may create several of these markers to swap between.
-	* Arrows can have 3 different styles:
+	* The D3 code for creating arrowheads (SVG markers) is included in `lexisChart.js`. The SVG markers are initialized with an id (e.g., `#arrow-head`) and can then be applied to SVG lines using D3 (i.e., `.attr('marker-end', 'url(#arrow-head)')`) or CSS (i.e., `marker-end: url(#arrow-head)`). To learn more about how the marker ends work, see [this short explainer](https://observablehq.com/@stvkas/interacting-with-marker-ends) made by Steve Kasica.
+	* Arrows can have 4 different styles:
  		1. ***Default***
  		2. ***Highlighted***: Some politicians are highlighted in the visualization and their name is displayed next to the arrow. For example, adjust the colour and the stroke width. Whether an arrow is highlighted is determined by the data attribute `label` (`1=highlight`). *Hint: you can use transform to rotate SVG text labels a few degrees:*
 
 	 		```js
 	 		.attr('transform', d => `translate(X-POSITION,Y-POSITION) rotate(-20)`);
 	 		```
-	 	3. ***Selected***: Users should be able to click on a single point in the scatter plot. The selected politician will get highlighted and their name is shown in the lexis chart, independent of the `label` attribute.
+	 	3. ***Selected***: Users should be able to click on a single point in the scatter plot. The selected politician will get a selected visual style (distinct from highlighted) and their name is shown in the lexis chart, independent of the `label` attribute.
+	 	4. ***Hovered***: When users hover on an arrow, the hover state will be uniquely styled.
     * Arrows might have the same `start_year` and `end_year`, in which case they will be rendered as an arrowhead with no line
-   * Show tooltips on `mouseover` with the following information: name, country, start and end year, age when they took office, total duration, and GDP per capita (if available). All arrows should have a tooltip on `mouseover`.
+   * Show tooltips on `mouseover` with the following information: name, country, start and end year, age when they took office, total duration, and GDP per capita (if available). All arrows (both the arrow head and the line) should have a tooltip on `mouseover`.
 
 		![Tooltip](tooltip.png?raw=true "Tooltip")
 
 4. **Bar chart**
 
-	* Count and visualize the number of female and male politicians. *Hint: You may want to use `d3.rollups()`*.
+	* Count and visualize the number of female and male politicians. *Hint: You may want to use `d3.rollups()` like in p0*.
 	* Generally, there will be only female/male politicians, but do not make the assumption that there will be.
 	* These counts will update as the global filter changes
 	* When a bar is selected, it should be darkened
@@ -108,7 +110,7 @@ We recommend that you break down the implementation into the following tasks. Pl
 
 		- Use the bar chart as an interactive filter for the lexis chart. For example, when users click on the `female` option, only female politicians are shown in the lexis chart. Another click on an active option resets the filter.
 		- If arrows are currently highlighted, arrows are only deselected if the bar chart filters them out. For example, if Trudeau is selected in the lexis chart, and the `male` bar is selected, the arrow representing Trudeau is NOT deselected.
-         - Selection: If a gender filter is active and arrows are selected and the gender filter is deactivated, the selected arrows should be maintained
+        - Selection: If a gender filter is active and arrows are selected and the gender filter is deactivated, the selected arrows should be maintained
 
 	2. ***Bar chart → scatter plot***
 

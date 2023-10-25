@@ -94,8 +94,9 @@ We recommend that you break down the implementation into the following tasks. Pl
 
 5. **Add text annotations**
 
-	* *Required:* Add a text label with the `name` of the costliest disaster of each year. The labels should be positioned below each semicircle and centered (hint: `.attr('text-anchor', 'middle')`). Make sure that all labels are also part of your enter-update-exit workflow. If more than one disaster is the costliest disaster of that year, render both text annotations.
+	* *Required:* Add a text label with the `name` of the costliest disaster of each year (that is shown). The labels should be positioned below each semicircle and centered (hint: `.attr('text-anchor', 'middle')`). Make sure that all labels are also part of your enter-update-exit workflow. If more than one disaster is the costliest disaster of that year, render both text annotations.
 	* *Required:* There must only be as many text objects rendered in the HMTL as there are costliest disasters. Do not append all of the disaster labels and change the opacity based on the costliest disaster.
+	* *Required:* Annotation must update to the costliest diasaster of the shown data. If some data is filtered (see step 6) the annotation must also update to the currently shown costliest disaster.
 	* *Not required:* In our solution, we displayed the text label for Hurricane Harvey at the top and showed the estimated cost in billion dollars. We have also included the caption: *"Circles are sized proportionally to their cost in 2017 dollars."*. Those annotations are optional.
 
 6. **Add a legend that also serves as an interactive filter**
@@ -141,7 +142,7 @@ We recommend that you break down the implementation into the following tasks. Pl
     * Fill opacity must be 0.60
     * Stroke colour must be #333
     * Stroke width must be 0.3
-    * The costliest disaster of each year must have a text annotation
+    * The visible costliest disaster of each year must have a text annotation
     * Marks are coloured correctly according to their categories
 * Tooltips
     * Every mark has a tooltip that displays on hover
