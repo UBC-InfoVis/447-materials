@@ -63,7 +63,7 @@ We recommend that you break down the implementation into the following tasks. Pl
 
 3. **Lexis chart**
 
-	* `age` is shown on the y-axis and `year` on the x-axis. You can set the input domains of the two linear linear scales to be static, so that the axes remain constant although filters or selections may change (e.g., age: [25,95] and year: [1950,2021]).
+	* `age` is shown on the y-axis and `year` on the x-axis. You can set the input domains of the two linear scales to be static, so that the axes remain constant although filters or selections may change (e.g., age: [25,95] and year: [1950,2021]).
 	* There will be arrows outside of these bounds, and they will be masked with a chart-mask, similar to P1. To guarantee they are correctly masked, add all elements to vis.chart.
 	* Include a label for `Age` for the y-axis in the top-left
 	* The lexis chart is similar to a scatter plot but instead of point marks, you need to draw lines/arrows. The coordinates for the lines are: x1=`start_year`, x2=`end_year`, y1=`start_age`, and y2=`end_age`.
