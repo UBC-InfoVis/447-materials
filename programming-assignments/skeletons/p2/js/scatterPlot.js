@@ -5,7 +5,7 @@ class ScatterPlot {
    * @param {Object}
    */
   // Todo: Add or remove parameters from the constructor as needed
-  constructor(_config) {
+  constructor(_config, data) {
     this.config = {
       parentElement: _config.parentElement,
       containerWidth: 720,
