@@ -78,6 +78,7 @@ class LexisChart {
    * https://observablehq.com/@stvkas/interacting-with-marker-ends
    */
   createMarkerEnds() {
+    let vis = this;
     // Default arrow head
     // id: arrow-head
     vis.chart.append('defs').append('marker')
