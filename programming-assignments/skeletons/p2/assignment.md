@@ -2,7 +2,7 @@
 
 *Submit the entire __p2__ project as a zip file to Gradescope before the due date. Include all modified files. Failure to follow instructions will result in an administrative penalty of up to 20%*
 
-This programming assignment assumes that you have fulfilled all course prerequisites and followed along with the D3 tutorials.
+Before starting this programming assignment, we highly recommend completing the following tutorials: [Tutorial 5: Multiple views and advanced interactiivity](https://github.com/UBC-InfoVis/447-materials/tree/25Jan/tutorials/5_D3_Tutorial_MV_Advanced_Interactivity), [Tutorial 6: Geographic maps](https://github.com/UBC-InfoVis/447-materials/tree/25Jan/tutorials/6_D3_Tutorial_Maps), and [Tutorial 7: Advanced concepts](https://github.com/UBC-InfoVis/447-materials/tree/25Jan/tutorials/7_D3_Tutorial_Advanced_Concepts). If you are having trouble with your assignment, referencing the tutorials first is often the best place to start!
 
 ### Template and Submission
 
