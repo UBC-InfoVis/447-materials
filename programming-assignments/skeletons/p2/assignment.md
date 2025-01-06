@@ -1,7 +1,5 @@
 # Programming Assignment 2
 
-*Out on Thu Oct 26 2023. Due on Wed Nov 8 2023 at 6pm.*
-
 *Submit the entire __p2__ project as a zip file to Gradescope before the due date. Include all modified files. Failure to follow instructions will result in an administrative penalty of up to 20%*
 
 This programming assignment assumes that you have fulfilled all course prerequisites and followed along with the D3 tutorials.
@@ -10,7 +8,7 @@ This programming assignment assumes that you have fulfilled all course prerequis
 
 We will use **gradescope** for all programming assignments and project milestones. You should already be well acquainted with the process from previous courses, but ask course staff if you need a refresher.
 
-This repo contains a basic template that should help you get started. You can download .zip of the repo: ([p2.zip](https://www.students.cs.ubc.ca/~cs-447/23Sep/p2.zip)).
+This repo contains a basic template that should help you get started. You can download .zip of the repo: ([p2.zip](https://www.students.cs.ubc.ca/~cs-447/25Jan/p2.zip)).
 A dataset is included in the `/data` folder. You will need to modify the `.html`, `.js`, and `.css` files as described below.
 
 Don't add new files, don't leave out files, and don't change the names of existing files. Any changes will result in an admin overhead penalty of up to 20%.

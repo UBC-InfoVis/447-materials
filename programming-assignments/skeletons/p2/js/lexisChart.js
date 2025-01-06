@@ -49,7 +49,7 @@ class LexisChart {
       .append('rect')
       .attr('width', vis.config.width + 5)
       .attr('y', -vis.config.margin.top)
-      .attr('height', vis.config.containerHeight);
+      .attr('height', vis.config.height);
 
     // Helper function to create the arrows and styles for our various arrow heads
     vis.createMarkerEnds();
@@ -78,6 +78,7 @@ class LexisChart {
    * https://observablehq.com/@stvkas/interacting-with-marker-ends
    */
   createMarkerEnds() {
+    let vis = this;
     // Default arrow head
     // id: arrow-head
     vis.chart.append('defs').append('marker')
