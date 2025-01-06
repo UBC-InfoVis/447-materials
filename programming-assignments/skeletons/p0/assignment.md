@@ -2,7 +2,7 @@
 
 *Submit the entire __p0__ project as a zip file to Gradescope before the due date. DO NOT upload any other files. Failure to follow instructions will result in an administrative overhead penalty of up to 20%*
 
-Before starting this programming assignment, we highly recommend completing D3 tutorials 1 & 2. If you are having trouble with your assignment, referencing the tutorials first is often the best place to start!
+Before starting this programming assignment, we highly recommend completing the following tutorials: [Web Development](https://github.com/UBC-InfoVis/447-materials/tree/25Jan/tutorials/0_Web_Tutorial), [Tutorial 1: Intro to D3](https://github.com/UBC-InfoVis/447-materials/tree/25Jan/tutorials/1_D3_Tutorial_Intro), and [Tutorial 2: Making a chart](https://github.com/UBC-InfoVis/447-materials/tree/25Jan/tutorials/2_D3_Tutorial_Making_Chart). If you are having trouble with your assignment, referencing the tutorials first is often the best place to start!
 
 ### Template and Submission
 
