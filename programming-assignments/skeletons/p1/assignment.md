@@ -2,7 +2,7 @@
 
 *Submit the entire __p1__ project as a zip file to Gradescope before the due date. Include all modified files. Failure to follow instructions will result in an administrative penalty of up to 20%*
 
-This programming assignment assumes that you have fulfilled all course prerequisites and followed along with the D3 tutorials.
+Before starting this programming assignment, we highly recommend completing the following tutorials: [Tutorial 3: Data Joins](../../../tutorials/3_D3_Tutorial_Datajoin) and [Tutorial 4: Basic Interactivity](../../../tutorials/4_D3_Tutorial_Basic_Interactivity). If you are having trouble with your assignment, referencing the tutorials first is often the best place to start!
 
 ### Template and Submission
 
