@@ -2,7 +2,7 @@
 
 *Submit the entire __p0__ project as a zip file to Gradescope before the due date. DO NOT upload any other files. Failure to follow instructions will result in an administrative overhead penalty of up to 20%*
 
-Before starting this programming assignment, we very highly recommend completing [D3 Tutorial 1 (Intro to D3)](../../../tutorials/1_D3_Tutorial_Intro/) and [D3 Tutorial 2 (Making a chart)]((../../../tutorials/1_D3_Tutorial_Intro/)). Also, if there are any aspects of web development that you're hazy about, then start with the refresher tutorial on Web Development If you are having trouble with your assignment, referencing the tutorials first is often the best place to start!
+Before starting this programming assignment, we very highly recommend completing [D3 Tutorial 1 (Intro to D3)](../../../tutorials/1_D3_Tutorial_Intro/) and [D3 Tutorial 2 (Making a chart)](../../../tutorials/2_D3_Tutorial_Making_Chart/). Also, if there are any aspects of web development that you're hazy about, then start with the refresher tutorial on Web Development If you are having trouble with your assignment, referencing the tutorials first is often the best place to start!
 
 ### Template and Submission
 
@@ -34,12 +34,12 @@ The final result of the *P0* assignment should look similar to the image below:
 
 2. **Initialize scales and axes**
     * You may only initilize and use one categorical scale and one linear scale. Generally, you should not create more scales than you need for a given solution. Try to reuse these for different functionality and across marks.
-    * Reference [D3 Tutorial 2 (Making a chart)]((../../../tutorials/1_D3_Tutorial_Intro/)) for more information on scales and axes.
+    * Reference [D3 Tutorial 2 (Making a chart)](../../../tutorials/2_D3_Tutorial_Making_Chart/) for more information on scales and axes.
 
 3. **Draw the points**
     * Use D3 to generate and position the point marks.
     * The point marks must have the class name "point".
-    * Reference [D3 Tutorial 2 (Making a chart)]((../../../tutorials/1_D3_Tutorial_Intro/)) on how to position marks according to your scales.
+    * Reference [D3 Tutorial 2 (Making a chart)](../../../tutorials/2_D3_Tutorial_Making_Chart/) on how to position marks according to your scales.
     * Hint: You can debug the points by inspecting their element. A common error is that points are not positioned correctly, causing them to be drawn on top of each other. You can debug situations like these by inspecting the DOM and seeing if things are drawn on top of each other.
 
 4. **Generate and append the summary statistics**
