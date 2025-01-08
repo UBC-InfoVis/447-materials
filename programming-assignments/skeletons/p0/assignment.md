@@ -2,7 +2,7 @@
 
 *Submit the entire __p0__ project as a zip file to Gradescope before the due date. DO NOT upload any other files. Failure to follow instructions will result in an administrative overhead penalty of up to 20%*
 
-Before starting this programming assignment, we very highly recommend completing [D3 Tutorial 1 (Intro to D3)](../../../tutorials/1_D3_Tutorial_Intro/) and [D3 Tutorial 2 (Making a chart)](../../../tutorials/2_D3_Tutorial_Making_Chart/). Also, if there are any aspects of web development that you're hazy about, then start with the refresher tutorial on Web Development If you are having trouble with your assignment, referencing the tutorials first is often the best place to start!
+Before starting this programming assignment, we very highly recommend completing [D3 Tutorial 1 (Intro to D3)](../../../tutorials/1_D3_Tutorial_Intro/) and [D3 Tutorial 2 (Making a chart)](../../../tutorials/2_D3_Tutorial_Making_Chart/). Also, if there are any aspects of web development that you're hazy about, then start with the refresher tutorial on [Web Development](../../../tutorials/0_Web_Tutorial/). If you are having trouble with your assignment, referencing the tutorials first is often the best place to start!
 
 ### Template and Submission
 

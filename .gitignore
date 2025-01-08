@@ -1,3 +1,6 @@
+#
+*.zip
+
 # System
 .DS_Store
 
