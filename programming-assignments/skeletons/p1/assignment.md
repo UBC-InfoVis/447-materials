@@ -2,7 +2,7 @@
 
 *Submit the entire __p1__ project as a zip file to Gradescope before the due date. Include all modified files. Failure to follow instructions will result in an administrative penalty of up to 20%*
 
-Before starting this programming assignment, we highly recommend completing the following tutorials: [Tutorial 3: Data Joins](../../../tutorials/3_D3_Tutorial_Datajoin) and [Tutorial 4: Basic Interactivity](../../../tutorials/4_D3_Tutorial_Basic_Interactivity). If you are having trouble with your assignment, referencing the tutorials first is often the best place to start!
+Before starting this programming assignment, we highly recommend completing the following tutorials: [Tutorial 3: Data Joins](../../../tutorials/3_D3_Tutorial_Datajoin) and [Tutorial 4: Basic Interactivity](../../../tutorials/4_D3_Tutorial_Basic_Interactivity). In addition, we created case studies for P1 to reference that walk you through more complicated examples of visualizations. We highly recommend going through them prior to starting P1: [Case Study: Drought](../../../case-studies/case-study_drought/), [case Study: Measles](../../../case-studies/case-study_measles-and-vaccines/) If you are having trouble with your assignment, referencing the tutorials first is often the best place to start!
 
 ### Template and Submission
 
