@@ -302,8 +302,8 @@ We use two "helper functions" to generate the pixel coordinates of the SVG paths
 
 	We have prepared the data for the layers in our area charts but now we need to convert it to SVG path instructions, such as
 	
-	```html
-<path d="M0,0L8.877627627627627,0L8.877627627627627,0L17.755255255255253,0L17.755255255255253,0L26.632882882882882,0L26.632882882882882,0.04260000000000004L35.51051051051051,0.04260000000000004L35.51051051051051, ...">
+	```html	
+	<path d="M0,0L8.877627627627627,0L8.877627627627627,0L17.755255255255253,0L17.755255255255253,0L26.632882882882882,0L26.632882882882882,0.04260000000000004L35.51051051051051,0.04260000000000004L35.51051051051051, ...">
 	```
 	
 	For this purpose, we initialize an area path generator that uses the x- and y-scales to convert the input data to pixel coordinates:
