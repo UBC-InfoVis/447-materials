@@ -104,7 +104,7 @@ We selected all *circles* and changed the *fill color*.
 D3 evaluates every *attr()* statement immediately, so the changes happen right away. But sometimes it is important to show the user what's happening between the states and not just the final result. D3 provides the `transition()` method that makes it easy to create these smooth, animated transitions between states:
 
 ```javascript
-d3.selectAll('circle').transition().attr('fill", 'blue');
+d3.selectAll('circle').transition().attr('fill', 'blue');
 ```
 
 When you add `.transition()`, ***D3 interpolates between the old values and the new values***, meaning it normalizes the beginning and ending values, and calculates all their in-between states.
